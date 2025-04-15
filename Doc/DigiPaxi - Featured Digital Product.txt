@@ -1,0 +1,25 @@
+DigiPaxi - Featured Digital Products & Affiliate Links
+1. Purpose
+This document lists the key digital products promoted by DigiPaxi through affiliate marketing. Each product is selected based on relevance, quality, and earning potential. The affiliate links are tracked and managed through platforms such as Coolors, Envato, Canva, and others.
+2. Product Listings
+Coolors.co – Color Palette Generator
+A user-friendly tool to generate beautiful color palettes for design and branding.
+Affiliate Link: https://coolors.co/?ref=paxiit
+Envato Elements – Digital Assets Subscription
+Unlimited downloads of premium assets: graphics, templates, fonts, videos, and more.
+Affiliate Link: https://1.envato.market/paxiit
+Canva Pro – Online Design Tool
+Create social media designs, presentations, and more with drag-and-drop simplicity.
+Affiliate Link: https://partner.canva.com/paxiit
+Gumroad – Sell Your Digital Products
+A platform to create, sell, and manage digital products including ebooks, templates, etc.
+Affiliate Link: https://gumroad.com/?ref=paxiit
+Namecheap – Domains & Hosting
+Affordable domain registration and simple hosting for small business websites.
+Affiliate Link: https://namecheap.pxf.io/paxiit
+3. Notes
+These affiliate links are embedded into DigiPaxi’s HTML site, with tracking enabled via each provider's affiliate platform. Analytics and commissions are reviewed monthly through respective dashboards.
+4. Recommendations
+- Update links regularly and test each redirect.
+- Highlight best-selling products on homepage and blog.
+- Use banner placements and comparison charts to boost conversions.

@@ -1,0 +1,34 @@
+DigiPaxi - Affiliate Marketing Business Plan
+1. Overview
+DigiPaxi is an affiliate marketing initiative launched to generate income while building the main Paxi iTechnologies platform. The goal is to promote and sell digital products, such as design tools, templates, color palettes, and software utilities through affiliate links hosted on a dedicated website.
+2. Objective
+The primary objective of DigiPaxi is to establish a lightweight and efficient affiliate site that drives traffic and generates passive income from relevant digital tools and resources in the IT and creative industry.
+3. Strategy
+- Focus on niche-specific digital products
+- Use structured content (reviews, recommendations, tutorials)
+- Host static HTML/CSS/JS site on Synology NAS for simplicity
+- Optimize for SEO and mobile performance
+4. Technical Stack
+- Static site built with HTML, CSS, and JS
+- Version-controlled using Git & GitHub
+- Local development in VS Code
+- Hosted via Synology NAS Web Station
+- Optional public deployment via GitHub Pages
+5. Website Structure
+- Homepage with featured affiliate products
+- Categories page (e.g., Colors, Fonts, Software Tools)
+- Blog for SEO and value content
+- Contact and legal pages (Privacy, Terms, Disclaimer)
+6. Revenue Channels
+- Affiliate commissions from product links
+- Sponsored placements or reviews
+- Email list building for future marketing
+7. Tools & Accounts
+- PayPal for commission payments
+- Affiliate programs: Coolors.co, Envato, Gumroad, Canva, etc.
+- Email capture and basic analytics via free tools
+8. Next Steps
+- Finalize initial affiliate product list
+- Complete homepage and category layout
+- Create 3–5 blog articles or product highlights
+- Launch and monitor site performance
