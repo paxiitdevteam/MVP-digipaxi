@@ -1,51 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DigiPaxi</title>
-    <link rel="stylesheet" href="css/digipaxi.css">
-    <script src="js/components.js" defer></script>
-    <script>
-        class ComponentLoader {
-            static async loadComponents() {
-                const components = {
-                    header: '/components/header.html',
-                    footer: '/components/footer.html'
-                };
-
-                for (const [id, path] of Object.entries(components)) {
-                    try {
-                        console.log(`Loading component: ${path}`);
-                        const element = document.getElementById(`${id}-placeholder`);
-                        if (!element) {
-                            console.error(`Placeholder for ${id} not found`);
-                            continue;
-                        }
-                        const response = await fetch(path);
-                        if (!response.ok) {
-                            throw new Error(`HTTP error! status: ${response.status}`);
-                        }
-                        const html = await response.text();
-                        element.innerHTML = html;
-                        console.log(`Successfully loaded ${id}`);
-                        console.log(`Injected content for ${id}:`, html); // Debugging log
-                    } catch (error) {
-                        console.error(`Failed to load ${id}:`, error);
-                    }
-                }
-            }
-        }
-
-        ComponentLoader.loadComponents();
-    </script>
-</head>
-<body>
+<div className="app-container">
     <div id="header-placeholder"></div>
-    <main>
-        <h1>Welcome to DigiPaxi</h1>
-        <p>This is the main page.</p>
-    </main>
     <div id="footer-placeholder"></div>
-</body>
-</html>
+</div>
+
+// Function to load header
+function loadHeader() {
+    document.getElementById('header-placeholder').innerHTML = `
+    <header>
+        <div class="branding">
+            <h1 data-translate="branding">DigiPaxi</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" data-translate="home">Home</a></li>
+                <li><a href="about.html" data-translate="about">About</a></li>
+                <li><a href="services.html" data-translate="services">Services</a></li>
+                <li><a href="contact.html" data-translate="contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="lang-toggle">
+            <button onclick="languageManager.applyLanguage('en')">EN</button>
+            <button onclick="languageManager.applyLanguage('fr')">FR</button>
+        </div>
+    </header>
+    `;
+}
+
+// Function to load footer
+function loadFooter() {
+    document.getElementById('footer-placeholder').innerHTML = `
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Address: 49 Avenue de Boissy, 94380, France</p>
+                <p>Email: tangongkp@yahoo.com</p>
+                <p>Phone: +33 7 82 39 13 11</p>
+            </div>
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a> |
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a> |
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> |
+                <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a> |
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i> YouTube</a> |
+                <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest"></i> Pinterest</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 DigiPaxi. All rights reserved.</p>
+            <p>Disclaimer: The information provided on this website is for general informational purposes only.</p>
+        </div>
+    </footer>
+    `;
+}
+
+// Load components when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    loadHeader();
+    loadFooter();
+});

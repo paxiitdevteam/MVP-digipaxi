@@ -1,3 +1,56 @@
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.backup
+.env.example
+
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Build files
+/dist
+/build
+/out
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+.cache
+
+# Local development
+*.local
+.env*.local
+
 class ComponentLoader {
     static async init() {
         try {
@@ -11,15 +64,15 @@ class ComponentLoader {
                     Error loading components. Please refresh the page.
                 </div>
             `;
-        }s/
-    }c/
-/Pictures/
+        }
+    }
+
     static async loadComponents() {
         const components = {
             header: '/components/header.html',
             footer: '/components/footer.html'
         };
-# IDE and editor files
+
         for (const [id, path] of Object.entries(components)) {
             try {
                 console.log(`Loading component: ${path}`);
@@ -39,11 +92,11 @@ class ComponentLoader {
                 console.error(`Failed to load ${id}:`, error);
             }
         }
-    }_modules/
-}.log
-/temp/
+    }
+}
+
 ComponentLoader.init();
 
 {/* Filepath: c:\Users\PC-PAXIIT\Documents\paxiitdevsite\components\header.html */}
-<header>e/
+<header>
     <h1>DigiPaxi Header</h1></header>{/* Filepath: c:\Users\PC-PAXIIT\Documents\paxiitdevsite\components\footer.html */}<footer>    <p>DigiPaxi Footer</p></footer>{/* Filepath: c:\Users\PC-PAXIIT\Documents\paxiitdevsite\index.html */}<!DOCTYPE html><html lang="en"></html><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>DigiPaxi</title>    <script src="/js/components.js" defer></script></head><body>    <div id="header-placeholder"></div>    <main>        <h1>Welcome to DigiPaxi</h1>        <p>This is the main page.</p>    </main>    <div id="footer-placeholder"></div></body></html>

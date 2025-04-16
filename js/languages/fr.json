@@ -1,0 +1,35 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Bienvenue chez PAXIIT",
+    "subtitle": "Votre Partenaire de Solutions Numériques",
+    "cta": "En savoir plus"
+  },
+  "about": {
+    "title": "À propos de nous",
+    "description": "PAXIIT est un fournisseur leader de solutions numériques aidant les entreprises à transformer leur présence en ligne."
+  },
+  "services": {
+    "title": "Nos Services",
+    "webdev": "Développement Web",
+    "design": "Design UI/UX",
+    "consulting": "Conseil Numérique"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "name": "Nom",
+    "email": "Email",
+    "message": "Message",
+    "send": "Envoyer le message"
+  },
+  "footer": {
+    "rights": "Tous droits réservés",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation"
+  }
+} 

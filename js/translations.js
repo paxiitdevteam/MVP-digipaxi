@@ -1,0 +1,31 @@
+
+const translations = {
+    en: {
+        branding: "DigiPaxi",
+        home: "Home",
+        about: "About",
+        services: "Services",
+        contact: "Contact",
+        contactInfo: "Contact Information",
+        address: "Address: 49 Avenue Lucie Aubrac, 94380, Bonneuil Sur Marne, France",
+        phone: "Phone: +33 7 82 39 13 11",
+        email: "Email: tangongkp@yahoo.com",
+        followUs: "Follow Us",
+        sendMessage: "Send Message",
+        feedbackSuccess: "Thank you! Your message has been sent successfully.",
+    },
+    fr: {
+        branding: "DigiPaxi",
+        home: "Accueil",
+        about: "À propos",
+        services: "Services",
+        contact: "Contact",
+        contactInfo: "Informations de contact",
+        address: "Adresse: 49 Avenue Lucie Aubrac, 94380, Bonneuil Sur Marne, France",
+        phone: "Téléphone: +33 7 82 39 13 11",
+        email: "E-mail: tangongkp@yahoo.com",
+        followUs: "Suivez-nous",
+        sendMessage: "Envoyer le message",
+        feedbackSuccess: "Merci ! Votre message a été envoyé avec succès.",
+    },
+};

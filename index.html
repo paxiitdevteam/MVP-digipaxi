@@ -3,179 +3,424 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About DigiPaxi</title>
+    <meta name="description" content="DigiPaxi - Your partner in digital transformation and affiliate marketing">
+    <title data-i18n="home.title">DigiPaxi - Digital Solutions & Affiliate Marketing</title>
     <link rel="stylesheet" href="css/digipaxi.css">
-    <style>
-        /* Footer Styles */
-        footer {
-            background-color: #222;
-            color: #ccc;
-            padding: 30px 20px;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        footer .footer-top {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-bottom: 20px;
-        }
-
-        footer .footer-top h4 {
-            margin-bottom: 15px;
-            font-size: 18px;
-            color: #fff;
-            text-transform: uppercase;
-        }
-
-        footer .footer-top ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        footer .footer-top ul li {
-            margin-bottom: 10px;
-        }
-
-        footer .footer-top ul li a {
-            color: #bbb; /* Lighter color for better readability */
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        footer .footer-top ul li a:hover {
-            text-decoration: underline;
-            color: #fff; /* Highlighted color on hover */
-        }
-
-        footer .contact-info p {
-            margin: 5px 0;
-            font-size: 14px;
-        }
-
-        footer .contact-info p a {
-            color: #bbb; /* Lighter color for email links */
-            text-decoration: none;
-        }
-
-        footer .contact-info p a:hover {
-            text-decoration: underline;
-            color: #fff; /* Highlighted color on hover */
-        }
-
-        footer .social-media a {
-            margin-right: 15px;
-        }
-
-        footer .social-media img {
-            width: 28px;
-            height: 28px;
-            vertical-align: middle;
-        }
-
-        footer .footer-bottom {
-            text-align: center;
-            border-top: 1px solid #444;
-            padding-top: 15px;
-            font-size: 12px;
-            color: #aaa;
-        }
-
-        /* Header Styles */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
-        }
-
-        header .branding h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-
-        header .navbar ul {
-            list-style: none;
-            display: flex;
-            gap: 15px;
-            margin: 0;
-            padding: 0;
-        }
-
-        header .navbar ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-        }
-
-        header .navbar ul li a:hover {
-            text-decoration: underline;
-        }
-
-        header .language-selector {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        header .language-selector select {
-            padding: 5px;
-            font-size: 14px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/language-switcher.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Add Font Awesome for enhanced icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="branding">
             <h1>DigiPaxi</h1>
         </div>
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Main navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" class="active" data-i18n="nav.home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
             </ul>
         </nav>
+        <div class="language-switcher">
+            <button class="lang-switch active" data-lang="en">EN</button>
+            <button class="lang-switch" data-lang="fr">FR</button>
+        </div>
     </header>
+
     <main>
-        <h1>About DigiPaxi</h1>
-        <p>This is the About page.</p>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 data-i18n="home.hero.title">Transform Your Digital Presence</h1>
+                <p data-i18n="home.hero.subtitle">Innovative solutions for modern businesses</p>
+                <div class="hero-buttons">
+                    <a href="services.html" class="cta-button primary" data-i18n="home.hero.cta">Explore Our Services</a>
+                    <a href="contact.html" class="cta-button secondary" data-i18n="home.hero.contact">Contact Us</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/digital-transformation.svg" alt="Digital Transformation" width="500" height="400">
+            </div>
+        </section>
+
+        <!-- Client Counter Section - Competitive Advantage -->
+        <section class="client-counter">
+            <div class="container">
+                <div class="counter-grid">
+                    <div class="counter-item">
+                        <div class="counter-number" data-count="150">0</div>
+                        <div class="counter-label" data-i18n="home.counter.clients">Happy Clients</div>
+                    </div>
+                    <div class="counter-item">
+                        <div class="counter-number" data-count="200">0</div>
+                        <div class="counter-label" data-i18n="home.counter.projects">Projects Completed</div>
+                    </div>
+                    <div class="counter-item">
+                        <div class="counter-number" data-count="15">0</div>
+                        <div class="counter-label" data-i18n="home.counter.experts">Industry Experts</div>
+                    </div>
+                    <div class="counter-item">
+                        <div class="counter-number" data-count="98">0</div>
+                        <div class="counter-label" data-i18n="home.counter.satisfaction">Client Satisfaction %</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="intro">
+            <div class="container">
+                <h2 data-i18n="home.intro.title">Welcome to DigiPaxi</h2>
+                <p data-i18n="home.intro.text">We specialize in digital transformation and affiliate marketing, helping businesses thrive in the digital age.</p>
+            </div>
+        </section>
+
+        <section class="services-preview">
+            <div class="container">
+                <h2 data-i18n="home.services.title">Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="images/web-dev-icon.svg" alt="Web Development" width="48" height="48">
+                        </div>
+                        <h3 data-i18n="home.services.webdev">Web Development</h3>
+                        <p data-i18n="home.services.webdev.desc">Custom websites and web applications tailored to your business needs.</p>
+                        <a href="services.html#webdev" class="service-link" data-i18n="home.services.learn">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="images/marketing-icon.svg" alt="Digital Marketing" width="48" height="48">
+                        </div>
+                        <h3 data-i18n="home.services.marketing">Digital Marketing</h3>
+                        <p data-i18n="home.services.marketing.desc">Strategic marketing solutions to increase your online visibility.</p>
+                        <a href="services.html#marketing" class="service-link" data-i18n="home.services.learn">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="images/ai-icon.svg" alt="AI Integration" width="48" height="48">
+                        </div>
+                        <h3 data-i18n="home.services.ai">AI Integration</h3>
+                        <p data-i18n="home.services.ai.desc">Smart solutions powered by artificial intelligence for business automation.</p>
+                        <a href="services.html#ai" class="service-link" data-i18n="home.services.learn">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="images/consulting-icon.svg" alt="IT Consulting" width="48" height="48">
+                        </div>
+                        <h3 data-i18n="home.services.consulting">IT Consulting</h3>
+                        <p data-i18n="home.services.consulting.desc">Expert guidance on technology adoption and digital strategy.</p>
+                        <a href="services.html#consulting" class="service-link" data-i18n="home.services.learn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies Section - Competitive Advantage -->
+        <section class="case-studies">
+            <div class="container">
+                <h2 data-i18n="home.casestudies.title">Success Stories</h2>
+                <p class="section-subtitle" data-i18n="home.casestudies.subtitle">See how we've helped businesses achieve their digital goals</p>
+                <div class="case-studies-grid">
+                    <div class="case-study-card">
+                        <div class="case-study-image">
+                            <img src="images/case-study-1.jpg" alt="E-commerce Transformation" width="400" height="250">
+                            <div class="case-study-overlay">
+                                <span class="case-study-category" data-i18n="home.casestudies.category1">E-commerce</span>
+                            </div>
+                        </div>
+                        <div class="case-study-content">
+                            <h3 data-i18n="home.casestudies.title1">E-commerce Transformation</h3>
+                            <p data-i18n="home.casestudies.desc1">How we helped a traditional retailer increase online sales by 250% in 6 months.</p>
+                            <div class="case-study-stats">
+                                <div class="stat">
+                                    <span class="stat-number">250%</span>
+                                    <span class="stat-label" data-i18n="home.casestudies.stat1">Sales Increase</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">6</span>
+                                    <span class="stat-label" data-i18n="home.casestudies.stat2">Months</span>
+                                </div>
+                            </div>
+                            <a href="case-studies.html#ecommerce" class="case-study-link" data-i18n="home.casestudies.read">Read Case Study</a>
+                        </div>
+                    </div>
+                    <div class="case-study-card">
+                        <div class="case-study-image">
+                            <img src="images/case-study-2.jpg" alt="Digital Marketing Campaign" width="400" height="250">
+                            <div class="case-study-overlay">
+                                <span class="case-study-category" data-i18n="home.casestudies.category2">Marketing</span>
+                            </div>
+                        </div>
+                        <div class="case-study-content">
+                            <h3 data-i18n="home.casestudies.title2">Digital Marketing Campaign</h3>
+                            <p data-i18n="home.casestudies.desc2">A comprehensive digital strategy that increased brand awareness by 300%.</p>
+                            <div class="case-study-stats">
+                                <div class="stat">
+                                    <span class="stat-number">300%</span>
+                                    <span class="stat-label" data-i18n="home.casestudies.stat3">Brand Awareness</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">45%</span>
+                                    <span class="stat-label" data-i18n="home.casestudies.stat4">ROI</span>
+                                </div>
+                            </div>
+                            <a href="case-studies.html#marketing" class="case-study-link" data-i18n="home.casestudies.read">Read Case Study</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-tools">
+            <div class="container">
+                <h2 data-i18n="home.tools.title">Featured Tools</h2>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <img src="images/coolors-logo.png" alt="Coolors.co" width="64" height="64">
+                        <h3>Coolors.co</h3>
+                        <p data-i18n="home.tools.coolors">The super fast color palette generator</p>
+                        <a href="https://coolors.co/?ref=paxiit" class="tool-link" target="_blank" data-i18n="home.tools.learn">Learn More</a>
+                    </div>
+                    <div class="tool-card">
+                        <img src="images/envato-logo.png" alt="Envato Elements" width="64" height="64">
+                        <h3>Envato Elements</h3>
+                        <p data-i18n="home.tools.envato">Unlimited downloads of premium digital assets</p>
+                        <a href="https://elements.envato.com/?ref=paxiit" class="tool-link" target="_blank" data-i18n="home.tools.learn">Learn More</a>
+                    </div>
+                    <div class="tool-card">
+                        <img src="images/canva-logo.png" alt="Canva Pro" width="64" height="64">
+                        <h3>Canva Pro</h3>
+                        <p data-i18n="home.tools.canva">Professional design tool for creating stunning visuals</p>
+                        <a href="https://www.canva.com/?ref=paxiit" class="tool-link" target="_blank" data-i18n="home.tools.learn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Free Resources Section - Competitive Advantage -->
+        <section class="free-resources">
+            <div class="container">
+                <h2 data-i18n="home.resources.title">Free Digital Resources</h2>
+                <p class="section-subtitle" data-i18n="home.resources.subtitle">Download our free guides and templates to kickstart your digital journey</p>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <h3 data-i18n="home.resources.guide1">Digital Marketing Guide</h3>
+                        <p data-i18n="home.resources.desc1">A comprehensive guide to digital marketing strategies for small businesses.</p>
+                        <a href="resources/digital-marketing-guide.pdf" class="resource-link" download data-i18n="home.resources.download">Download PDF</a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-file-excel"></i>
+                        </div>
+                        <h3 data-i18n="home.resources.guide2">Content Calendar Template</h3>
+                        <p data-i18n="home.resources.desc2">Plan your content strategy with our customizable content calendar.</p>
+                        <a href="resources/content-calendar.xlsx" class="resource-link" download data-i18n="home.resources.download">Download Excel</a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-file-word"></i>
+                        </div>
+                        <h3 data-i18n="home.resources.guide3">Website Audit Checklist</h3>
+                        <p data-i18n="home.resources.desc3">Ensure your website is optimized for performance and SEO.</p>
+                        <a href="resources/website-audit.docx" class="resource-link" download data-i18n="home.resources.download">Download Word</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2 data-i18n="home.testimonials.title">What Our Clients Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <blockquote>
+                            <p data-i18n="home.testimonials.quote1">DigiPaxi transformed our online presence completely. Their expertise in digital marketing helped us reach new heights.</p>
+                            <cite data-i18n="home.testimonials.author1">Sarah Johnson, CEO</cite>
+                        </blockquote>
+                    </div>
+                    <div class="testimonial-card">
+                        <blockquote>
+                            <p data-i18n="home.testimonials.quote2">The web development services provided by DigiPaxi were exceptional. Our new website has significantly improved our conversion rates.</p>
+                            <cite data-i18n="home.testimonials.author2">Michael Chen, Marketing Director</cite>
+                        </blockquote>
+                    </div>
+                    <div class="testimonial-card">
+                        <blockquote>
+                            <p data-i18n="home.testimonials.quote3">DigiPaxi's IT consulting helped us streamline our operations and implement the right tools for our growing business.</p>
+                            <cite data-i18n="home.testimonials.author3">David Rodriguez, Operations Manager</cite>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Indicators - Competitive Advantage -->
+        <section class="trust-indicators">
+            <div class="container">
+                <h2 data-i18n="home.trust.title">Trusted By Industry Leaders</h2>
+                <div class="trust-logos">
+                    <img src="images/client-logo-1.png" alt="Client 1" width="120" height="60">
+                    <img src="images/client-logo-2.png" alt="Client 2" width="120" height="60">
+                    <img src="images/client-logo-3.png" alt="Client 3" width="120" height="60">
+                    <img src="images/client-logo-4.png" alt="Client 4" width="120" height="60">
+                    <img src="images/client-logo-5.png" alt="Client 5" width="120" height="60">
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-card">
+                    <h2 data-i18n="home.newsletter.title">Stay Updated</h2>
+                    <p data-i18n="home.newsletter.text">Subscribe to our newsletter for the latest digital insights and tips.</p>
+                    <form class="newsletter-form" action="#" method="POST">
+                        <input type="email" placeholder="Enter your email" required data-i18n="home.newsletter.placeholder">
+                        <button type="submit" data-i18n="home.newsletter.submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
+
     <footer>
-        <div class="footer-top">
-            <div class="quick-links">
-                <h4>Quick Links</h4>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 data-i18n="footer.quickLinks">Quick Links</h3>
                 <ul>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms and Conditions</a></li>
-                    <li><a href="cookies.html">Cookies Policy</a></li>
-                    <li><a href="sitemap.html">Sitemap</a></li>
+                    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                    <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
                 </ul>
             </div>
-            <div class="contact-info">
-                <h4>Contact Us</h4>
-                <p>Address: 49 Avenue de Boissy, 94380, France</p>
-                <p>Email: <a href="mailto:tangongkp@yahoo.com">tangongkp@yahoo.com</a></p>
-                <p>Phone: +33 7 82 39 13 11</p>
+            <div class="footer-section">
+                <h3 data-i18n="footer.contact">Contact Info</h3>
+                <p>
+                    <a href="mailto:tangongkp@yahoo.com">tangongkp@yahoo.com</a><br>
+                    <a href="tel:+33782391311">+33 7 82 39 13 11</a><br>
+                    49 Avenue Lucie Aubrac<br>
+                    94380, Bonneuil Sur Marne<br>
+                    France
+                </p>
             </div>
-            <div class="social-media">
-                <h4>Follow Us</h4>
-                <a href="https://facebook.com" target="_blank"><img src="/icons/facebook.svg" alt="Facebook"></a>
-                <a href="https://twitter.com" target="_blank"><img src="/icons/twitter.svg" alt="Twitter"></a>
-                <a href="https://linkedin.com" target="_blank"><img src="/icons/linkedin.svg" alt="LinkedIn"></a>
-                <a href="https://instagram.com" target="_blank"><img src="/icons/instagram.svg" alt="Instagram"></a>
+            <div class="footer-section">
+                <h3 data-i18n="footer.social">Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com/digipaxi" target="_blank" aria-label="Facebook">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.77,7.46H14.5v-1.9c0-.9.6-1.1,1-1.1h3V.5h-4.33C10.24.5,9.5,3.44,9.5,5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4Z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/digipaxi" target="_blank" aria-label="Twitter">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/company/digipaxi" target="_blank" aria-label="LinkedIn">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/digipaxi" target="_blank" aria-label="Instagram">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="https://tiktok.com/@digipaxi" target="_blank" aria-label="TikTok">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                        </svg>
+                    </a>
+                    <a href="https://youtube.com/c/digipaxi" target="_blank" aria-label="YouTube">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- Social Media Counter -->
+                <div class="social-counter">
+                    <div class="social-stat">
+                        <div class="social-stat-number">15K+</div>
+                        <div class="social-stat-label">Followers</div>
+                    </div>
+                    <div class="social-stat">
+                        <div class="social-stat-number">1.2K</div>
+                        <div class="social-stat-label">Posts</div>
+                    </div>
+                    <div class="social-stat">
+                        <div class="social-stat-number">5.5K</div>
+                        <div class="social-stat-label">Engagements</div>
+                    </div>
+                </div>
+                
+                <!-- Share Buttons -->
+                <div class="share-buttons">
+                    <button class="share-button" onclick="shareOnFacebook()">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.77,7.46H14.5v-1.9c0-.9.6-1.1,1-1.1h3V.5h-4.33C10.24.5,9.5,3.44,9.5,5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4Z"/>
+                        </svg>
+                        Share
+                    </button>
+                    <button class="share-button" onclick="shareOnTwitter()">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/>
+                        </svg>
+                        Tweet
+                    </button>
+                    <button class="share-button" onclick="shareOnLinkedIn()">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        Share
+                    </button>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 DigiPaxi. All rights reserved.</p>
-            <p>Disclaimer: The information provided on this website is for general informational purposes only.</p>
+            <p>&copy; 2024 DigiPaxi. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Enhanced Chat Interface -->
+    <button class="chat-button">
+        <img src="images/malory-avatar.svg" alt="Chat with Malory">
+        <span class="chat-badge">1</span>
+    </button>
+    
+    <div class="chat-window">
+        <div class="chat-header">
+            <div class="agent-info">
+                <div class="agent-avatar">
+                    <img src="images/malory-avatar.svg" alt="Malory">
+                </div>
+                <div>
+                    <h3>Malory</h3>
+                    <small>Digital Assistant</small>
+                </div>
+            </div>
+            <div class="chat-controls">
+                <button class="clear-chat" data-i18n="chat.clear">Clear Chat</button>
+                <button class="close-chat">&times;</button>
+            </div>
+        </div>
+        <div class="chat-messages">
+            <!-- Messages will be dynamically added here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" placeholder="Type your message..." data-i18n="chat.placeholder">
+            <button data-i18n="chat.send">Send</button>
+        </div>
+    </div>
+
+    <script src="js/language-switcher.js"></script>
+    <script src="js/chatagent.js"></script>
+    <script src="js/counter.js"></script>
 </body>
 </html>

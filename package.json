@@ -1,0 +1,19 @@
+{
+  "name": "paxiit-dev-site",
+  "version": "1.0.0",
+  "description": "PAXIIT Development Website",
+  "scripts": {
+    "start": "live-server --port=8000 --host=127.0.0.1",
+    "test": "jest",
+    "lint": "eslint .",
+    "dev": "concurrently \"npm run start\" \"npm run watch\"",
+    "watch": "nodemon --watch css --watch js --watch *.html --exec \"npm run lint\""
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.3",
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0"
+  }
+} 

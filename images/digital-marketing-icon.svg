@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="60" cy="60" r="58" fill="#14281d" stroke="#c2a878" stroke-width="2"/>
+  
+  <!-- Growth chart -->
+  <path d="M30,90 L30,40 C30,40 45,60 60,50 S90,30 90,30" 
+        fill="none" 
+        stroke="#f1f5f2" 
+        stroke-width="3"
+        stroke-linecap="round"/>
+  
+  <!-- Rising dots -->
+  <circle cx="30" cy="40" r="3" fill="#6e633d"/>
+  <circle cx="60" cy="50" r="3" fill="#6e633d"/>
+  <circle cx="90" cy="30" r="3" fill="#6e633d"/>
+  
+  <!-- Base line -->
+  <line x1="30" y1="90" x2="90" y2="90" stroke="#c2a878" stroke-width="2"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="75" cy="40" r="2" fill="#c2a878" opacity="0.5"/>
+  <circle cx="45" cy="60" r="2" fill="#c2a878" opacity="0.5"/>
+</svg> 

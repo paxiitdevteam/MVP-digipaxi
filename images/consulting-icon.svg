@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="60" cy="60" r="58" fill="#14281d" stroke="#c2a878" stroke-width="2"/>
+  
+  <!-- Gear icon -->
+  <path d="M60,35 L65,35 L67,45 A20,20 0 0,1 75,49 L84,44 L87,47 L82,56
+           A20,20 0 0,1 85,65 L95,67 L95,72 L85,74 A20,20 0 0,1 82,83 L87,92
+           L84,95 L75,90 A20,20 0 0,1 67,94 L65,104 L60,104 L58,94 A20,20 0 0,1 50,90
+           L41,95 L38,92 L43,83 A20,20 0 0,1 40,74 L30,72 L30,67 L40,65
+           A20,20 0 0,1 43,56 L38,47 L41,44 L50,49 A20,20 0 0,1 58,45 Z"
+        fill="#6e633d"/>
+  
+  <!-- Inner circle -->
+  <circle cx="60" cy="70" r="15" fill="#14281d" stroke="#c2a878" stroke-width="2"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="60" cy="70" r="3" fill="#f1f5f2"/>
+  <circle cx="60" cy="55" r="2" fill="#c2a878"/>
+  <circle cx="45" cy="70" r="2" fill="#c2a878"/>
+  <circle cx="75" cy="70" r="2" fill="#c2a878"/>
+  <circle cx="60" cy="85" r="2" fill="#c2a878"/>
+</svg> 

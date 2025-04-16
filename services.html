@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DigiPaxi Services - Web Development, Digital Marketing, Affiliate Marketing, and IT Consulting">
+    <title data-i18n="services.title">Our Services - DigiPaxi</title>
+    <link rel="stylesheet" href="css/digipaxi.css">
+    <link rel="stylesheet" href="css/language-switcher.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        .product-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .product-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .product-logo {
+            width: 60px;
+            height: 60px;
+            margin-right: 15px;
+            object-fit: contain;
+        }
+        .product-title {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        .product-description {
+            margin-bottom: 15px;
+        }
+        .product-features {
+            margin-bottom: 15px;
+        }
+        .product-features li {
+            margin-bottom: 5px;
+        }
+        .product-cta {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .product-cta:hover {
+            background-color: #45a049;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .comparison-table th {
+            background-color: #f2f2f2;
+        }
+        .comparison-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .testimonial {
+            background-color: #f9f9f9;
+            border-left: 4px solid #4CAF50;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .testimonial-author {
+            font-style: italic;
+            text-align: right;
+            margin-top: 10px;
+        }
+        .section-divider {
+            border-top: 1px solid #e0e0e0;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="branding">
+            <h1>DigiPaxi</h1>
+        </div>
+        <nav class="navbar" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                <li><a href="services.html" class="active" data-i18n="nav.services">Services</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="language-switcher">
+            <button class="lang-switch active" data-lang="en">EN</button>
+            <button class="lang-switch" data-lang="fr">FR</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 data-i18n="services.title">Our Services</h1>
+                <p data-i18n="services.intro">At DigiPaxi, we offer a range of services designed to help businesses thrive in the digital age. Our expertise spans multiple domains to ensure comprehensive solutions for our clients.</p>
+            </div>
+        </section>
+
+        <section class="services-grid">
+            <div class="service-card">
+                <img src="images/web-dev-icon.svg" alt="Web Development" class="service-icon">
+                <div class="service-content">
+                    <h2 data-i18n="services.webdev.title">1. Web Development</h2>
+                    <p data-i18n="services.webdev.description">We create responsive, user-friendly websites tailored to your business needs, ensuring a seamless online presence.</p>
+                    <blockquote class="testimonial">
+                        <p data-i18n="services.webdev.testimonial">"DigiPaxi transformed our online presence with a website that perfectly represents our brand and converts visitors into customers."</p>
+                        <cite data-i18n="services.webdev.testimonialAuthor">- Sarah Johnson, Small Business Owner</cite>
+                    </blockquote>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="images/digital-marketing-icon.svg" alt="Digital Marketing" class="service-icon">
+                <div class="service-content">
+                    <h2 data-i18n="services.marketing.title">2. Digital Marketing</h2>
+                    <p data-i18n="services.marketing.description">Our digital marketing strategies help you reach your target audience effectively through SEO, social media, and email campaigns.</p>
+                    <blockquote class="testimonial">
+                        <p data-i18n="services.marketing.testimonial">"Since implementing DigiPaxi's digital marketing strategy, our online traffic has increased by 200% and our conversion rate has improved significantly."</p>
+                        <cite data-i18n="services.marketing.testimonialAuthor">- Michael Chen, Marketing Director</cite>
+                    </blockquote>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="images/consulting-icon.svg" alt="IT Consulting" class="service-icon">
+                <div class="service-content">
+                    <h2 data-i18n="services.consulting.title">3. IT Consulting</h2>
+                    <p data-i18n="services.consulting.description">Our IT consulting services guide you in adopting the right technologies to optimize your business operations.</p>
+                    <blockquote class="testimonial">
+                        <p data-i18n="services.consulting.testimonial">"DigiPaxi's IT consulting helped us streamline our operations and implement the right tools for our growing business."</p>
+                        <cite data-i18n="services.consulting.testimonialAuthor">- David Rodriguez, Operations Manager</cite>
+                    </blockquote>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="images/affiliate-icon.svg" alt="Digital Products" class="service-icon">
+                <div class="service-content">
+                    <h2 data-i18n="services.affiliate.title">4. Recommended Digital Products</h2>
+                    <p data-i18n="services.affiliate.description">We've carefully selected these high-quality digital products to enhance your creative and business workflows.</p>
+                    <div class="product-grid">
+                        <div class="product-item">
+                            <h3 data-i18n="services.affiliate.coolors">Coolors.co</h3>
+                            <p data-i18n="services.affiliate.coolorsDesc">Color palette generator</p>
+                            <ul>
+                                <li data-i18n="services.affiliate.coolorsFeature1">Generate color combinations</li>
+                                <li data-i18n="services.affiliate.coolorsFeature2">Export palettes</li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <h3 data-i18n="services.affiliate.envato">Envato Elements</h3>
+                            <p data-i18n="services.affiliate.envatoDesc">Premium digital assets</p>
+                            <ul>
+                                <li data-i18n="services.affiliate.envatoFeature1">Millions of assets</li>
+                                <li data-i18n="services.affiliate.envatoFeature2">Unlimited downloads</li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <h3 data-i18n="services.affiliate.canva">Canva Pro</h3>
+                            <p data-i18n="services.affiliate.canvaDesc">Online design tool</p>
+                            <ul>
+                                <li data-i18n="services.affiliate.canvaFeature1">Premium templates</li>
+                                <li data-i18n="services.affiliate.canvaFeature2">Advanced features</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 data-i18n="footer.quickLinks">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                    <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 data-i18n="footer.contact">Contact Info</h3>
+                <p>
+                    <a href="mailto:tangongkp@yahoo.com">tangongkp@yahoo.com</a><br>
+                    <a href="tel:+33782391311">+33 7 82 39 13 11</a><br>
+                    49 Avenue Lucie Aubrac<br>
+                    94380, Bonneuil Sur Marne<br>
+                    France
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3 data-i18n="footer.social">Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com/digipaxi" target="_blank" aria-label="Facebook">
+                        <img src="images/facebook.svg" alt="Facebook" width="28" height="28">
+                    </a>
+                    <a href="https://twitter.com/digipaxi" target="_blank" aria-label="Twitter">
+                        <img src="images/twitter.svg" alt="Twitter" width="28" height="28">
+                    </a>
+                    <a href="https://linkedin.com/company/digipaxi" target="_blank" aria-label="LinkedIn">
+                        <img src="images/linkedin.svg" alt="LinkedIn" width="28" height="28">
+                    </a>
+                    <a href="https://instagram.com/digipaxi" target="_blank" aria-label="Instagram">
+                        <img src="images/instagram.svg" alt="Instagram" width="28" height="28">
+                    </a>
+                    <a href="https://tiktok.com/@digipaxi" target="_blank" aria-label="TikTok">
+                        <img src="images/tiktok.svg" alt="TikTok" width="28" height="28">
+                    </a>
+                    <a href="https://youtube.com/c/digipaxi" target="_blank" aria-label="YouTube">
+                        <img src="images/youtube.svg" alt="YouTube" width="28" height="28">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DigiPaxi. <span data-i18n="footer.rights">All rights reserved.</span></p>
+        </div>
+    </footer>
+
+    <script src="js/language-switcher.js"></script>
+</body>
+</html>

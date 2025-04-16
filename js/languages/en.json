@@ -1,0 +1,35 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Welcome to PAXIIT",
+    "subtitle": "Your Digital Solutions Partner",
+    "cta": "Learn More"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "PAXIIT is a leading digital solutions provider helping businesses transform their online presence."
+  },
+  "services": {
+    "title": "Our Services",
+    "webdev": "Web Development",
+    "design": "UI/UX Design",
+    "consulting": "Digital Consulting"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message"
+  },
+  "footer": {
+    "rights": "All Rights Reserved",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+} 
