@@ -1,21 +1,21 @@
 <header>
     <div class="branding">
-        <h1>DigiPaxi</h1>
+        <a href="index.html" class="logo-link">
+            <h1>DigiPaxi</h1>
+        </a>
     </div>
     <nav class="navbar">
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/services.html">Services</a></li>
-            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+            <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+            <li><a href="services.html" class="nav-link" data-i18n="nav.services">Services</a></li>
+            <li><a href="blog.html" class="nav-link" data-i18n="nav.blog">Blog</a></li>
+            <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
         </ul>
     </nav>
     <div class="language-selector">
-        <label for="language">Language:</label>
-        <select id="language">
-            <option value="en">English</option>
-            <option value="fr">French</option>
-        </select>
+        <button class="lang-switch" data-lang="en" data-i18n="language.en">EN</button>
+        <button class="lang-switch" data-lang="fr" data-i18n="language.fr">FR</button>
     </div>
 </header>
 
@@ -25,102 +25,126 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
+    padding: 1rem 2rem;
+    background: #14281d;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.branding {
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    text-decoration: none;
     color: #fff;
 }
 
-header .branding h1 {
+.branding h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
 }
 
-header .navbar ul {
+.navbar ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 2rem;
     margin: 0;
     padding: 0;
 }
 
-header .navbar ul li a {
+.nav-link {
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
 }
 
-header .navbar ul li a:hover {
-    text-decoration: underline;
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #2196F3;
+    transition: width 0.3s ease;
 }
 
-header .language-selector {
+.nav-link:hover {
+    color: #2196F3;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #2196F3;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+.language-selector {
     display: flex;
+    gap: 0.5rem;
+    margin-left: 1rem;
     align-items: center;
-    gap: 5px;
 }
 
-header .language-selector select {
-    padding: 5px;
-    font-size: 14px;
+.lang-switch {
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.lang-switch:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+}
+
+.lang-switch.active {
+    background: #2196F3;
+    border-color: #2196F3;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    .navbar ul {
+        gap: 1rem;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .language-selector {
+        margin-left: 0.5rem;
+    }
+
+    .lang-switch {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+    }
 }
 </style>
-
-<script>
-class ComponentLoader {
-    static async init() {
-        try {
-            console.log('Initializing component loader...');
-            await this.loadComponents();
-            this.setupLanguageSwitcher();
-            console.log('Components loaded successfully.');
-        } catch (error) {
-            console.error('Error during initialization:', error);
-            document.body.innerHTML += `
-                <div style="padding: 20px; background: #fee; color: #933; text-align: center;">
-                    Error loading components. Please refresh the page.
-                </div>
-            `;
-        }
-    }
-
-    static async loadComponents() {
-        const components = {
-            header: '/components/header.html',
-            footer: '/components/footer.html'
-        };
-
-        for (const [id, path] of Object.entries(components)) {
-            try {
-                console.log(`Loading component: ${path}`);
-                const element = document.getElementById(`${id}-placeholder`);
-                if (!element) {
-                    console.error(`Placeholder for ${id} not found`);
-                    continue;
-                }
-                const response = await fetch(path);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const html = await response.text();
-                element.innerHTML = html;
-                console.log(`Successfully loaded ${id}`);
-            } catch (error) {
-                console.error(`Failed to load ${id}: `, error);
-            }
-        }
-    }
-
-    static setupLanguageSwitcher() {
-        const languageSelector = document.getElementById('language');
-        if (languageSelector) {
-            languageSelector.addEventListener('change', (event) => {
-                const selectedLanguage = event.target.value;
-                console.log(`Language switched to: ${selectedLanguage}`);
-                // Add logic to update the page content based on the selected language
-            });
-        }
-    }
-}
-
-ComponentLoader.init();
-</script>

@@ -1,63 +1,435 @@
-<div className="app-container">
-    <div id="header-placeholder"></div>
-    <div id="footer-placeholder"></div>
-</div>
+class ComponentLoader {
+    static translations = {
+        en: {
+            // Navigation
+            'nav.home': 'Home',
+            'nav.about': 'About',
+            'nav.services': 'Services',
+            'nav.blog': 'Blog',
+            'nav.contact': 'Contact',
+            'language.en': 'EN',
+            'language.fr': 'FR',
+            
+            // Home Page
+            'home.title': 'DigiPaxi - Digital Solutions & Affiliate Marketing',
+            'home.hero.title': 'Transform Your Digital Presence',
+            'home.hero.subtitle': 'Innovative solutions for modern businesses',
+            'home.hero.cta': 'Explore Our Services',
+            'home.hero.contact': 'Contact Us',
+            'home.counter.clients': 'Happy Clients',
+            'home.counter.projects': 'Projects Completed',
+            'home.counter.experts': 'Industry Experts',
+            'home.counter.satisfaction': 'Client Satisfaction %',
+            'home.intro.title': 'Welcome to DigiPaxi',
+            'home.intro.text': 'We specialize in digital transformation and affiliate marketing, helping businesses thrive in the digital age.',
+            'home.services.title': 'Our Services',
+            'home.services.webdev': 'Web Development',
+            'home.services.webdev.desc': 'Custom websites and web applications tailored to your business needs.',
+            'home.services.marketing': 'Digital Marketing',
+            'home.services.marketing.desc': 'Strategic marketing solutions to increase your online visibility.',
+            'home.services.ai': 'AI Integration',
+            'home.services.ai.desc': 'Smart solutions powered by artificial intelligence for business automation.',
+            'home.services.consulting': 'IT Consulting',
+            'home.services.consulting.desc': 'Expert guidance on technology adoption and digital strategy.',
+            'home.services.learn': 'Learn More',
+            'home.casestudies.title': 'Success Stories',
+            'home.casestudies.subtitle': 'See how we\'ve helped businesses achieve their digital goals',
+            'home.casestudies.category1': 'E-commerce',
+            'home.casestudies.title1': 'E-commerce Transformation',
+            'home.casestudies.desc1': 'How we helped a traditional retailer increase online sales by 250% in 6 months.',
+            'home.casestudies.stat1': 'Sales Increase',
+            'home.casestudies.stat2': 'Months',
+            'home.casestudies.category2': 'Marketing',
+            'home.casestudies.title2': 'Digital Marketing Campaign',
+            'home.casestudies.desc2': 'A comprehensive digital strategy that increased brand awareness by 300%.',
+            'home.casestudies.stat3': 'Brand Awareness',
+            'home.casestudies.stat4': 'ROI',
+            'home.casestudies.read': 'Read Case Study',
+            'home.tools.title': 'Featured Tools',
+            'home.tools.coolors': 'The super fast color palette generator',
+            'home.tools.envato': 'Unlimited downloads of premium digital assets',
+            'home.tools.canva': 'Professional design tool for creating stunning visuals',
+            'home.tools.learn': 'Learn More',
+            'home.resources.title': 'Free Digital Resources',
+            'home.resources.subtitle': 'Download our free guides and templates to kickstart your digital journey',
+            'home.resources.guide1': 'Digital Marketing Guide',
 
-// Function to load header
-function loadHeader() {
-    document.getElementById('header-placeholder').innerHTML = `
-    <header>
-        <div class="branding">
-            <h1 data-translate="branding">DigiPaxi</h1>
-        </div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html" data-translate="home">Home</a></li>
-                <li><a href="about.html" data-translate="about">About</a></li>
-                <li><a href="services.html" data-translate="services">Services</a></li>
-                <li><a href="contact.html" data-translate="contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="lang-toggle">
-            <button onclick="languageManager.applyLanguage('en')">EN</button>
-            <button onclick="languageManager.applyLanguage('fr')">FR</button>
-        </div>
-    </header>
-    `;
+            // Services Page
+            'services.title': 'Our Services - DigiPaxi',
+            'services.intro': 'At DigiPaxi, we offer a range of services designed to help businesses thrive in the digital age.',
+            'services.webdev.title': '1. Web Development',
+            'services.webdev.description': 'We create responsive, user-friendly websites tailored to your business needs.',
+            'services.webdev.testimonial': 'DigiPaxi transformed our online presence with a website that perfectly represents our brand.',
+            'services.webdev.testimonialAuthor': '- Sarah Johnson, Small Business Owner',
+            'services.marketing.title': '2. Digital Marketing',
+            'services.marketing.description': 'Our digital marketing strategies help you reach your target audience effectively.',
+            'services.marketing.testimonial': 'Since implementing DigiPaxi\'s strategy, our online traffic has increased by 200%.',
+            'services.marketing.testimonialAuthor': '- Michael Chen, Marketing Director',
+            'services.consulting.title': '3. IT Consulting',
+            'services.consulting.description': 'Our IT consulting services guide you in adopting the right technologies.',
+            'services.consulting.testimonial': 'DigiPaxi\'s IT consulting helped us streamline our operations.',
+            'services.consulting.testimonialAuthor': '- David Rodriguez, Operations Manager',
+
+            // Contact Page
+            'contact.title': 'Contact Us - DigiPaxi',
+            'contact.subtitle': 'Get in touch with us for any inquiries or support.',
+            'contact.form.name': 'Name:',
+            'contact.form.email': 'Email:',
+            'contact.form.subject': 'Subject:',
+            'contact.form.message': 'Message:',
+            'contact.form.submit': 'Send Message',
+            'contact.info.title': 'Contact Information',
+            'contact.social.title': 'Follow Us',
+
+            // About Page
+            'about.title': 'Excellence in Digital Innovation',
+            'about.description': 'DigiPaxi is a premier digital transformation consultancy, combining cutting-edge technology with strategic expertise to drive business growth and innovation.',
+            'about.expertise.title': 'Our Expertise',
+            'about.expertise.description': 'With a proven track record of success, DigiPaxi specializes in delivering comprehensive digital solutions that transform businesses and drive sustainable growth.',
+            'about.expertise.web': 'Advanced Web Development & Design',
+            'about.expertise.marketing': 'Strategic Digital Marketing',
+            'about.expertise.consulting': 'Enterprise IT Consulting',
+            'about.expertise.ecommerce': 'E-commerce Solutions',
+            'about.expertise.analytics': 'Data Analytics & Insights',
+            'about.stats.projects': 'Projects Completed',
+            'about.stats.satisfaction': 'Client Satisfaction',
+            'about.stats.support': 'Support Available',
+            'about.vision.title': 'Vision & Mission',
+            'about.vision.text': 'We envision a digital landscape where businesses of all sizes can harness the power of technology to achieve unprecedented growth and success.',
+            'about.values.innovation.title': 'Innovation',
+            'about.values.innovation.desc': 'Pioneering digital solutions',
+            'about.values.excellence.title': 'Excellence',
+            'about.values.excellence.desc': 'Uncompromising quality',
+            'about.values.integrity.title': 'Integrity',
+            'about.values.integrity.desc': 'Trust & transparency',
+            'about.approach.title': 'Our Approach',
+            'about.approach.description': 'At DigiPaxi, we believe in a collaborative, results-driven approach that puts our clients\' success at the forefront.',
+            'about.approach.strategy': 'Strategic Planning & Analysis',
+            'about.approach.custom': 'Customized Solution Development',
+            'about.approach.agile': 'Agile Implementation',
+            'about.approach.monitoring': 'Continuous Monitoring & Optimization',
+            'about.approach.support': 'Comprehensive Support & Training',
+            'about.partnership.title': 'Strategic Partnerships',
+            'about.partnership.description': 'We\'ve cultivated partnerships with industry leaders to provide our clients with access to premium tools and resources.',
+            'about.partnership.coolors': 'Coolors.co - Professional Color Solutions',
+            'about.partnership.envato': 'Envato Elements - Digital Asset Library',
+            'about.partnership.canva': 'Canva Pro - Design Excellence',
+            'about.partnership.gumroad': 'Gumroad - E-commerce Solutions',
+            'about.partnership.namecheap': 'Namecheap - Domain & Hosting',
+
+            // Blog Page
+            'blog.title': 'Our Blog',
+            'blog.subtitle': 'Insights, tutorials, and updates on digital solutions',
+            'blog.post1.title': 'Getting Started with Digital Marketing',
+            'blog.post1.excerpt': 'Learn the fundamentals of digital marketing and how to create a successful strategy for your business.',
+            'blog.post2.title': 'Web Design Trends for 2024',
+            'blog.post2.excerpt': 'Discover the latest web design trends that will dominate the digital landscape in 2024.',
+            'blog.post3.title': 'Affiliate Marketing Strategies',
+            'blog.post3.excerpt': 'Explore effective affiliate marketing strategies to boost your online revenue.',
+            'blog.post4.title': 'SEO Best Practices',
+            'blog.post4.excerpt': 'Learn the essential SEO techniques to improve your website\'s visibility in search engines.',
+            'blog.post5.title': 'Digital Tools for Productivity',
+            'blog.post5.excerpt': 'Discover the best digital tools to enhance your productivity and streamline your workflow.',
+            'blog.post6.title': 'Content Marketing Guide',
+            'blog.post6.excerpt': 'A comprehensive guide to creating and implementing an effective content marketing strategy.',
+            'blog.readMore': 'Read More',
+            'blog.categories.title': 'Categories',
+            'blog.categories.design': 'Design',
+            'blog.categories.development': 'Development',
+            'blog.categories.marketing': 'Marketing',
+            'blog.categories.tools': 'Tools',
+            'blog.categories.tutorials': 'Tutorials',
+            'blog.categories.reviews': 'Reviews',
+            'blog.featured.title': 'Featured Products',
+            'blog.featured.coolors': 'The super fast color palette generator',
+            'blog.featured.learn': 'Learn More',
+            'blog.pagination.prev': 'Previous',
+            'blog.pagination.next': 'Next'
+        },
+        fr: {
+            // Navigation
+            'nav.home': 'Accueil',
+            'nav.about': 'À propos',
+            'nav.services': 'Services',
+            'nav.blog': 'Blog',
+            'nav.contact': 'Contact',
+            'language.en': 'AN',
+            'language.fr': 'FR',
+            
+            // Home Page
+            'home.title': 'DigiPaxi - Solutions Numériques & Marketing d\'Affiliation',
+            'home.hero.title': 'Transformez Votre Présence Numérique',
+            'home.hero.subtitle': 'Solutions innovantes pour les entreprises modernes',
+            'home.hero.cta': 'Découvrir Nos Services',
+            'home.hero.contact': 'Contactez-nous',
+            'home.counter.clients': 'Clients Satisfaits',
+            'home.counter.projects': 'Projets Réalisés',
+            'home.counter.experts': 'Experts du Secteur',
+            'home.counter.satisfaction': 'Satisfaction Client %',
+            'home.intro.title': 'Bienvenue chez DigiPaxi',
+            'home.intro.text': 'Nous sommes spécialisés dans la transformation numérique et le marketing d\'affiliation.',
+            'home.services.title': 'Nos Services',
+            'home.services.webdev': 'Développement Web',
+            'home.services.webdev.desc': 'Sites web et applications sur mesure adaptés à vos besoins.',
+            'home.services.marketing': 'Marketing Digital',
+            'home.services.marketing.desc': 'Solutions marketing stratégiques pour augmenter votre visibilité en ligne.',
+            'home.services.ai': 'Intégration IA',
+            'home.services.ai.desc': 'Solutions intelligentes alimentées par l\'IA pour l\'automatisation.',
+            'home.services.consulting': 'Conseil IT',
+            'home.services.consulting.desc': 'Conseils d\'experts en adoption technologique et stratégie numérique.',
+            'home.services.learn': 'En Savoir Plus',
+            'home.casestudies.title': 'Histoires de Réussite',
+            'home.casestudies.subtitle': 'Découvrez comment nous aidons les entreprises à atteindre leurs objectifs',
+            'home.casestudies.category1': 'E-commerce',
+            'home.casestudies.title1': 'Transformation E-commerce',
+            'home.casestudies.desc1': 'Comment nous avons aidé un détaillant à augmenter ses ventes de 250% en 6 mois.',
+            'home.casestudies.stat1': 'Augmentation des Ventes',
+            'home.casestudies.stat2': 'Mois',
+            'home.casestudies.category2': 'Marketing',
+            'home.casestudies.title2': 'Campagne Marketing Digital',
+            'home.casestudies.desc2': 'Une stratégie digitale complète qui a augmenté la notoriété de 300%.',
+            'home.casestudies.stat3': 'Notoriété de la Marque',
+            'home.casestudies.stat4': 'Retour sur Investissement',
+            'home.casestudies.read': 'Lire l\'Étude de Cas',
+            'home.tools.title': 'Outils Recommandés',
+            'home.tools.coolors': 'Le générateur de palettes de couleurs ultra rapide',
+            'home.tools.envato': 'Téléchargements illimités de ressources numériques premium',
+            'home.tools.canva': 'Outil de design professionnel pour créer des visuels impressionnants',
+            'home.tools.learn': 'En Savoir Plus',
+            'home.resources.title': 'Ressources Numériques Gratuites',
+            'home.resources.subtitle': 'Téléchargez nos guides et modèles gratuits',
+            'home.resources.guide1': 'Guide du Marketing Digital',
+
+            // Services Page
+            'services.title': 'Nos Services - DigiPaxi',
+            'services.intro': 'Chez DigiPaxi, nous proposons une gamme de services conçus pour aider les entreprises.',
+            'services.webdev.title': '1. Développement Web',
+            'services.webdev.description': 'Nous créons des sites web réactifs et conviviaux adaptés à vos besoins.',
+            'services.webdev.testimonial': 'DigiPaxi a transformé notre présence en ligne avec un site qui représente parfaitement notre marque.',
+            'services.webdev.testimonialAuthor': '- Sarah Johnson, Chef d\'Entreprise',
+            'services.marketing.title': '2. Marketing Digital',
+            'services.marketing.description': 'Nos stratégies de marketing digital vous aident à atteindre votre audience.',
+            'services.marketing.testimonial': 'Depuis la mise en place de la stratégie DigiPaxi, notre trafic a augmenté de 200%.',
+            'services.marketing.testimonialAuthor': '- Michael Chen, Directeur Marketing',
+            'services.consulting.title': '3. Conseil IT',
+            'services.consulting.description': 'Nos services de conseil IT vous guident dans l\'adoption des technologies.',
+            'services.consulting.testimonial': 'Le conseil IT de DigiPaxi nous a aidés à optimiser nos opérations.',
+            'services.consulting.testimonialAuthor': '- David Rodriguez, Responsable des Opérations',
+
+            // Contact Page
+            'contact.title': 'Contactez-nous - DigiPaxi',
+            'contact.subtitle': 'Contactez-nous pour toute demande ou assistance.',
+            'contact.form.name': 'Nom:',
+            'contact.form.email': 'Email:',
+            'contact.form.subject': 'Sujet:',
+            'contact.form.message': 'Message:',
+            'contact.form.submit': 'Envoyer le Message',
+            'contact.info.title': 'Informations de Contact',
+            'contact.social.title': 'Suivez-nous',
+
+            // About Page
+            'about.title': 'Excellence en Innovation Numérique',
+            'about.description': 'DigiPaxi est un cabinet de conseil en transformation numérique de premier plan, combinant technologie de pointe et expertise stratégique.',
+            'about.expertise.title': 'Notre Expertise',
+            'about.expertise.description': 'Avec un bilan éprouvé de succès, DigiPaxi est spécialisé dans la fourniture de solutions numériques complètes.',
+            'about.expertise.web': 'Développement Web Avancé & Design',
+            'about.expertise.marketing': 'Marketing Digital Stratégique',
+            'about.expertise.consulting': 'Conseil IT Entreprise',
+            'about.expertise.ecommerce': 'Solutions E-commerce',
+            'about.expertise.analytics': 'Analyse de Données & Insights',
+            'about.stats.projects': 'Projets Réalisés',
+            'about.stats.satisfaction': 'Satisfaction Client',
+            'about.stats.support': 'Support Disponible',
+            'about.vision.title': 'Vision & Mission',
+            'about.vision.text': 'Nous envisageons un paysage numérique où les entreprises de toutes tailles peuvent exploiter la puissance de la technologie.',
+            'about.values.innovation.title': 'Innovation',
+            'about.values.innovation.desc': 'Solutions numériques pionnières',
+            'about.values.excellence.title': 'Excellence',
+            'about.values.excellence.desc': 'Qualité sans compromis',
+            'about.values.integrity.title': 'Intégrité',
+            'about.values.integrity.desc': 'Confiance & transparence',
+            'about.approach.title': 'Notre Approche',
+            'about.approach.description': 'Chez DigiPaxi, nous croyons en une approche collaborative axée sur les résultats.',
+            'about.approach.strategy': 'Planification & Analyse Stratégique',
+            'about.approach.custom': 'Développement de Solutions Personnalisées',
+            'about.approach.agile': 'Implémentation Agile',
+            'about.approach.monitoring': 'Surveillance & Optimisation Continue',
+            'about.approach.support': 'Support & Formation Complets',
+            'about.partnership.title': 'Partenariats Stratégiques',
+            'about.partnership.description': 'Nous avons développé des partenariats avec des leaders de l\'industrie.',
+            'about.partnership.coolors': 'Coolors.co - Solutions Professionnelles de Couleurs',
+            'about.partnership.envato': 'Envato Elements - Bibliothèque d\'Assets Numériques',
+            'about.partnership.canva': 'Canva Pro - Excellence en Design',
+            'about.partnership.gumroad': 'Gumroad - Solutions E-commerce',
+            'about.partnership.namecheap': 'Namecheap - Domaine & Hébergement',
+
+            // Blog Page
+            'blog.title': 'Notre Blog',
+            'blog.subtitle': 'Insights, tutoriels et actualités sur les solutions numériques',
+            'blog.post1.title': 'Débuter avec le Marketing Digital',
+            'blog.post1.excerpt': 'Apprenez les fondamentaux du marketing digital et comment créer une stratégie efficace.',
+            'blog.post2.title': 'Tendances Web Design 2024',
+            'blog.post2.excerpt': 'Découvrez les dernières tendances du web design qui domineront en 2024.',
+            'blog.post3.title': 'Stratégies de Marketing d\'Affiliation',
+            'blog.post3.excerpt': 'Explorez des stratégies efficaces pour augmenter vos revenus en ligne.',
+            'blog.post4.title': 'Meilleures Pratiques SEO',
+            'blog.post4.excerpt': 'Apprenez les techniques SEO essentielles pour améliorer la visibilité de votre site.',
+            'blog.post5.title': 'Outils Numériques pour la Productivité',
+            'blog.post5.excerpt': 'Découvrez les meilleurs outils pour améliorer votre productivité.',
+            'blog.post6.title': 'Guide du Marketing de Contenu',
+            'blog.post6.excerpt': 'Un guide complet pour créer et mettre en œuvre une stratégie de contenu efficace.',
+            'blog.readMore': 'Lire Plus',
+            'blog.categories.title': 'Catégories',
+            'blog.categories.design': 'Design',
+            'blog.categories.development': 'Développement',
+            'blog.categories.marketing': 'Marketing',
+            'blog.categories.tools': 'Outils',
+            'blog.categories.tutorials': 'Tutoriels',
+            'blog.categories.reviews': 'Avis',
+            'blog.featured.title': 'Produits Vedettes',
+            'blog.featured.coolors': 'Le générateur de palettes de couleurs ultra rapide',
+            'blog.featured.learn': 'En Savoir Plus',
+            'blog.pagination.prev': 'Précédent',
+            'blog.pagination.next': 'Suivant'
+        }
+    };
+
+    static async init() {
+        await this.loadComponents();
+        this.initializeLanguage();
+        this.initializeHeader();
+        this.initializeFooter();
+    }
+
+    static async loadComponents() {
+        await Promise.all([
+            this.loadComponent('header', 'components/header.html'),
+            this.loadComponent('footer', 'components/footer.html')
+        ]);
+    }
+
+    static async loadComponent(name, path) {
+        try {
+            const placeholder = document.getElementById(`${name}-placeholder`);
+            if (!placeholder) return;
+
+            const response = await fetch(path);
+            if (!response.ok) throw new Error(`Failed to load ${name} component`);
+            
+            const html = await response.text();
+            placeholder.innerHTML = html;
+            
+            // Initialize component-specific functionality
+            if (name === 'header') {
+                this.initializeHeader();
+            } else if (name === 'footer') {
+                this.initializeFooter();
+            }
+        } catch (error) {
+            console.error(`Error loading ${name} component:`, error);
+        }
+    }
+
+    static initializeLanguage() {
+        const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+        this.updateLanguage(savedLang);
+    }
+
+    static updateLanguage(lang) {
+        const elements = document.querySelectorAll('[data-i18n]');
+        elements.forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            if (this.translations[lang] && this.translations[lang][key]) {
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.placeholder = this.translations[lang][key];
+                } else {
+                    element.textContent = this.translations[lang][key];
+                }
+            }
+        });
+    }
+
+    static initializeHeader() {
+        // Set active nav link
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPath.split('/').pop() || 
+                (currentPath === '/' && link.getAttribute('href') === 'index.html')) {
+                link.classList.add('active');
+            }
+        });
+
+        // Initialize language switcher
+        const langButtons = document.querySelectorAll('.lang-switch');
+        const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+        
+        // Set initial active state
+        langButtons.forEach(btn => {
+            if (btn.dataset.lang === savedLang) {
+                btn.classList.add('active');
+            }
+            
+            btn.addEventListener('click', () => {
+                const lang = btn.dataset.lang;
+                localStorage.setItem('selectedLanguage', lang);
+                
+                // Update active state
+                langButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                // Update translations
+                this.updateLanguage(lang);
+                
+                // Dispatch event for other components
+                const event = new CustomEvent('languageChange', { 
+                    detail: { language: lang } 
+                });
+                document.dispatchEvent(event);
+            });
+        });
+
+        // Add scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (header) {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            }
+        });
+    }
+
+    static initializeFooter() {
+        const footer = document.querySelector('footer');
+        if (!footer) return;
+
+        // Initialize social icons hover effect
+        const socialIcons = footer.querySelectorAll('.social-oval');
+        socialIcons.forEach(icon => {
+            icon.addEventListener('mouseover', function() {
+                this.style.transform = 'scale(1.1)';
+                this.style.transition = 'transform 0.3s ease';
+            });
+            
+            icon.addEventListener('mouseout', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        // Ensure Font Awesome is loaded
+        if (!document.querySelector('link[href*="fontawesome"]')) {
+            const fontAwesome = document.createElement('link');
+            fontAwesome.rel = 'stylesheet';
+            fontAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css';
+            document.head.appendChild(fontAwesome);
+        }
+    }
 }
 
-// Function to load footer
-function loadFooter() {
-    document.getElementById('footer-placeholder').innerHTML = `
-    <footer>
-        <div class="footer-content">
-            <div class="contact-info">
-                <h3>Contact Us</h3>
-                <p>Address: 49 Avenue de Boissy, 94380, France</p>
-                <p>Email: tangongkp@yahoo.com</p>
-                <p>Phone: +33 7 82 39 13 11</p>
-            </div>
-            <div class="social-media">
-                <h3>Follow Us</h3>
-                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a> |
-                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a> |
-                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
-                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> |
-                <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a> |
-                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i> YouTube</a> |
-                <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest"></i> Pinterest</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2025 DigiPaxi. All rights reserved.</p>
-            <p>Disclaimer: The information provided on this website is for general informational purposes only.</p>
-        </div>
-    </footer>
-    `;
-}
-
-// Load components when DOM is ready
+// Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    loadHeader();
-    loadFooter();
+    ComponentLoader.init();
 });

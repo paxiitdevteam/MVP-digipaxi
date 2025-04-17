@@ -5,31 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="About DigiPaxi - Your Premier Partner in Digital Transformation and Innovation">
     <title data-i18n="about.title">About Us - DigiPaxi</title>
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/digipaxi.css">
-    <link rel="stylesheet" href="css/language-switcher.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <div class="branding">
-            <a href="index.html" class="logo-link">
-                <h1>DigiPaxi</h1>
-            </a>
-        </div>
-        <nav class="navbar" aria-label="Main navigation">
-            <ul>
-                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-                <li><a href="about.html" class="active" data-i18n="nav.about">About</a></li>
-                <li><a href="services.html" data-i18n="nav.services">Services</a></li>
-                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="language-switcher">
-            <button class="lang-switch active" data-lang="en">EN</button>
-            <button class="lang-switch" data-lang="fr">FR</button>
-        </div>
-    </header>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
 
+    <!-- Main Content -->
     <main>
         <section class="about-hero">
             <div class="about-hero-content">
@@ -113,56 +102,21 @@
         </div>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3 data-i18n="footer.quickLinks">Quick Links</h3>
-                <ul>
-                    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-                    <li><a href="about.html" data-i18n="nav.about">About</a></li>
-                    <li><a href="services.html" data-i18n="nav.services">Services</a></li>
-                    <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3 data-i18n="footer.contact">Contact Info</h3>
-                <p>
-                    <a href="mailto:tangongkp@yahoo.com">tangongkp@yahoo.com</a><br>
-                    <a href="tel:+33782391311">+33 7 82 39 13 11</a><br>
-                    49 Avenue Lucie Aubrac<br>
-                    94380, Bonneuil Sur Marne<br>
-                    France
-                </p>
-            </div>
-            <div class="footer-section">
-                <h3 data-i18n="footer.social">Follow Us</h3>
-                <div class="social-links">
-                    <a href="https://facebook.com/digipaxi" target="_blank" aria-label="Facebook">
-                        <img src="images/facebook.svg" alt="Facebook" width="28" height="28">
-                    </a>
-                    <a href="https://twitter.com/digipaxi" target="_blank" aria-label="Twitter">
-                        <img src="images/twitter.svg" alt="Twitter" width="28" height="28">
-                    </a>
-                    <a href="https://linkedin.com/company/digipaxi" target="_blank" aria-label="LinkedIn">
-                        <img src="images/linkedin.svg" alt="LinkedIn" width="28" height="28">
-                    </a>
-                    <a href="https://instagram.com/digipaxi" target="_blank" aria-label="Instagram">
-                        <img src="images/instagram.svg" alt="Instagram" width="28" height="28">
-                    </a>
-                    <a href="https://tiktok.com/@digipaxi" target="_blank" aria-label="TikTok">
-                        <img src="images/tiktok.svg" alt="TikTok" width="28" height="28">
-                    </a>
-                    <a href="https://youtube.com/c/digipaxi" target="_blank" aria-label="YouTube">
-                        <img src="images/youtube.svg" alt="YouTube" width="28" height="28">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 DigiPaxi. <span data-i18n="footer.rights">All rights reserved.</span></p>
-        </div>
-    </footer>
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
 
+    <!-- Scripts -->
+    <script src="js/components.js"></script>
     <script src="js/language-switcher.js"></script>
+    <script>
+        // Ensure components are loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof ComponentLoader !== 'undefined') {
+                ComponentLoader.init();
+            } else {
+                console.error('ComponentLoader not found! Check if components.js is loaded correctly.');
+            }
+        });
+    </script>
 </body>
 </html>
