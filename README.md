@@ -1,68 +1,57 @@
 # DigiPaxi - Digital Solutions & Affiliate Marketing
 
-Welcome to the DigiPaxi project repository! This is a modern web platform offering digital transformation solutions and affiliate marketing services.
+Welcome to the DigiPaxi website repository! This is the official codebase for our digital solutions and affiliate marketing platform.
 
-## Features
+## 🌟 Features
 
-- Responsive web design
-- Multilingual support (English/French)
-- Interactive chat interface
-- Client success stories
-- Free digital resources
-- Social media integration
-- Newsletter subscription
-- Trust indicators and client testimonials
+- **Multilingual Support**: Full English and French language support
+- **Responsive Design**: Mobile-first approach ensuring great UX across all devices
+- **Modern UI**: Clean and professional design with consistent branding
+- **Service Showcase**: Detailed presentation of our digital solutions
+- **Blog Platform**: Regular updates and insights about digital transformation
+- **Contact System**: Easy ways to get in touch with our team
 
-## Technologies Used
+## 🛠️ Technologies Used
 
 - HTML5
 - CSS3
-- JavaScript (ES6+)
-- SVG for icons and illustrations
-- Responsive design with CSS Grid and Flexbox
+- JavaScript (Vanilla)
+- Font Awesome Icons
+- Responsive Design
+- Component-based Architecture
 
-## Project Structure
+## 📋 Pages
 
-```
-digipaxi/
-├── css/
-│   ├── digipaxi.css
-│   └── language-switcher.css
-├── js/
-│   ├── chatagent.js
-│   ├── components.js
-│   ├── config.js
-│   ├── env-loader.js
-│   └── language-switcher.js
-├── images/
-├── components/
-└── docs/
-```
+- **Home**: Introduction to DigiPaxi and our services
+- **About**: Our company story and values
+- **Services**: Detailed information about our offerings
+- **Blog**: Latest articles and insights
+- **Contact**: Get in touch with our team
+- **Sitemap**: Easy navigation through our website
 
-## Setup
+## 🔧 Setup
 
-1. Clone the repository
-2. Copy `.env.example` to `.env` and update the values
-3. Open `index.html` in your browser
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/paxiitdevteam/MVP-digipaxi.git
+   ```
 
-## Environment Variables
+2. Open the project in your preferred code editor
 
-See `README-env.md` for detailed information about environment variables configuration.
+3. Launch the website:
+   - Use a local server (like Live Server in VS Code)
+   - Or open `index.html` directly in your browser
 
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a new Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Contact
+## 📞 Contact
 
 - Email: tangongkp@yahoo.com
 - Phone: +33 7 82 39 13 11
-- Address: 49 Avenue Lucie Aubrac, 94380 Bonneuil Sur Marne, France 
+- Address: 49 Avenue Lucie Aubrac, 94380, Bonneuil Sur Marne, France
+
+## 📄 License
+
+© 2025 DigiPaxi. All rights reserved.
+
+---
+
+Made with ❤️ by DigiPaxi Team 
