@@ -1,57 +1,96 @@
-# DigiPaxi - Digital Solutions & Affiliate Marketing
+# DigiPaxi Website
 
-Welcome to the DigiPaxi website repository! This is the official codebase for our digital solutions and affiliate marketing platform.
+A modern, responsive website for DigiPaxi, showcasing our digital solutions, certifications, and partnerships.
 
-## 🌟 Features
+## Features
 
-- **Multilingual Support**: Full English and French language support
-- **Responsive Design**: Mobile-first approach ensuring great UX across all devices
-- **Modern UI**: Clean and professional design with consistent branding
-- **Service Showcase**: Detailed presentation of our digital solutions
-- **Blog Platform**: Regular updates and insights about digital transformation
-- **Contact System**: Easy ways to get in touch with our team
+- Responsive design optimized for all devices
+- Bilingual support (English/French)
+- Modern UI with smooth animations
+- Component-based architecture
+- Certification showcase
+- Partner directory
+- Blog section
+- Service portfolio
+- Contact form
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - HTML5
-- CSS3
-- JavaScript (Vanilla)
-- Font Awesome Icons
-- Responsive Design
-- Component-based Architecture
+- CSS3 (with modern features like Grid and Flexbox)
+- JavaScript (ES6+)
+- Component-based architecture
+- Internationalization support
 
-## 📋 Pages
+## Project Structure
 
-- **Home**: Introduction to DigiPaxi and our services
-- **About**: Our company story and values
-- **Services**: Detailed information about our offerings
-- **Blog**: Latest articles and insights
-- **Contact**: Get in touch with our team
-- **Sitemap**: Easy navigation through our website
+```
+├── components/          # Reusable components
+│   ├── header.html
+│   └── footer.html
+├── css/                # Stylesheets
+│   ├── digipaxi.css
+│   └── components.css
+├── js/                 # JavaScript files
+│   └── components.js
+├── images/            # Image assets
+│   └── products/
+├── assets/           # Other assets
+│   └── logos/
+├── index.html        # Home page
+├── about.html        # About page
+├── services.html     # Services page
+├── blog.html         # Blog page
+├── certifications.html # Certifications page
+├── partners.html     # Partners page
+├── contact.html      # Contact page
+└── README.md        # Project documentation
+```
 
-## 🔧 Setup
+## Setup and Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/paxiitdevteam/MVP-digipaxi.git
-   ```
+```bash
+git clone https://github.com/yourusername/digipaxi-website.git
+```
 
-2. Open the project in your preferred code editor
+2. Navigate to the project directory:
+```bash
+cd digipaxi-website
+```
 
-3. Launch the website:
-   - Use a local server (like Live Server in VS Code)
-   - Or open `index.html` directly in your browser
+3. Open index.html in your browser or use a local server:
+```bash
+# Using Python 3
+python -m http.server 8000
 
-## 📞 Contact
+# Using PHP
+php -S localhost:8000
+```
 
-- Email: tangongkp@yahoo.com
-- Phone: +33 7 82 39 13 11
-- Address: 49 Avenue Lucie Aubrac, 94380, Bonneuil Sur Marne, France
+4. Visit `http://localhost:8000` in your browser
 
-## 📄 License
+## Development
 
-© 2025 DigiPaxi. All rights reserved.
+- The site uses a component-based architecture for reusability
+- Components are loaded dynamically using JavaScript
+- Styles are organized in separate files for better maintenance
+- Internationalization is handled through the components.js file
 
----
+## Contributing
 
-Made with ❤️ by DigiPaxi Team 
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details
+
+## Contact
+
+DigiPaxi - [contact@digipaxi.com](mailto:contact@digipaxi.com)
+
+Project Link: [https://github.com/yourusername/digipaxi-website](https://github.com/yourusername/digipaxi-website) 

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="affiliate.title">Affiliate Products - DigiPaxi</title>
+    <link rel="stylesheet" href="css/digipaxi.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .products-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .product-content {
+            padding: 20px;
+        }
+        
+        .product-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #14281d;
+            margin-bottom: 10px;
+        }
+        
+        .product-description {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .product-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: #355834;
+            margin-bottom: 15px;
+        }
+        
+        .product-button {
+            display: inline-block;
+            background-color: #355834;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .product-button:hover {
+            background-color: #2a452c;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .section-description {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="products-container">
+            <h1 class="section-title" data-i18n="affiliate.main_title">Featured Affiliate Products</h1>
+            <p class="section-description" data-i18n="affiliate.description">Discover our curated selection of premium digital products and tools to enhance your workflow and boost productivity.</p>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="images/products/coolors.jpg" alt="Coolors - Color Palette Generator" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title" data-i18n="affiliate.product1.title">Coolors - Color Palette Generator</h3>
+                        <p class="product-description" data-i18n="affiliate.product1.description">The super fast color palette generator for designers and developers. Create beautiful color schemes in seconds.</p>
+                        <div class="product-price">$9.99/month</div>
+                        <a href="https://coolors.co" target="_blank" class="product-button" data-i18n="affiliate.product1.button">Get Started</a>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="images/products/envato.jpg" alt="Envato Elements" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title" data-i18n="affiliate.product2.title">Envato Elements</h3>
+                        <p class="product-description" data-i18n="affiliate.product2.description">Unlimited downloads of premium digital assets including templates, graphics, and more for your creative projects.</p>
+                        <div class="product-price">$16.50/month</div>
+                        <a href="https://elements.envato.com" target="_blank" class="product-button" data-i18n="affiliate.product2.button">Explore</a>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="images/products/canva.jpg" alt="Canva Pro" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title" data-i18n="affiliate.product3.title">Canva Pro</h3>
+                        <p class="product-description" data-i18n="affiliate.product3.description">Professional design tool for creating stunning visuals, presentations, and marketing materials with ease.</p>
+                        <div class="product-price">$12.99/month</div>
+                        <a href="https://www.canva.com" target="_blank" class="product-button" data-i18n="affiliate.product3.button">Design Now</a>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <img src="images/products/gumroad.jpg" alt="Gumroad" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title" data-i18n="affiliate.product4.title">Gumroad</h3>
+                        <p class="product-description" data-i18n="affiliate.product4.description">Sell your digital products directly to your audience with this easy-to-use e-commerce platform for creators.</p>
+                        <div class="product-price">Free + 3.5% + $0.30 per sale</div>
+                        <a href="https://gumroad.com" target="_blank" class="product-button" data-i18n="affiliate.product4.button">Start Selling</a>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <img src="images/products/namecheap.jpg" alt="Namecheap" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title" data-i18n="affiliate.product5.title">Namecheap</h3>
+                        <p class="product-description" data-i18n="affiliate.product5.description">Affordable domain registration and web hosting services with excellent customer support and security features.</p>
+                        <div class="product-price">From $5.98/year</div>
+                        <a href="https://www.namecheap.com" target="_blank" class="product-button" data-i18n="affiliate.product5.button">Get Domain</a>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <img src="images/products/notion.jpg" alt="Notion" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title" data-i18n="affiliate.product6.title">Notion</h3>
+                        <p class="product-description" data-i18n="affiliate.product6.description">All-in-one workspace for notes, tasks, wikis, and databases. Organize your work and life in one place.</p>
+                        <div class="product-price">$10/month</div>
+                        <a href="https://www.notion.so" target="_blank" class="product-button" data-i18n="affiliate.product6.button">Try Notion</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            await ComponentLoader.init();
+        });
+    </script>
+</body>
+</html>

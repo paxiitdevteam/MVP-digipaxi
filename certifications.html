@@ -1,40 +1,250 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Certifications & Standards</title>
-    <link rel="stylesheet" href="certifications.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="certifications.title">Certifications & Standards - DigiPaxi</title>
+    <link rel="stylesheet" href="css/digipaxi.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .certifications-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .certifications-hero {
+            text-align: center;
+            margin-bottom: 60px;
+            background: linear-gradient(rgba(53, 88, 52, 0.05), rgba(53, 88, 52, 0.1));
+            padding: 60px 20px;
+            border-radius: 15px;
+        }
+
+        .certifications-hero h2 {
+            color: #355834;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .certifications-description {
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .certification-category {
+            margin-bottom: 60px;
+        }
+
+        .category-title {
+            color: #6e633d;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #2196F3;
+            border-radius: 2px;
+        }
+
+        .certification-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 200px;
+        }
+
+        .certification-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .certification-logo {
+            height: 80px;
+            width: auto;
+            margin-bottom: 20px;
+            object-fit: contain;
+            filter: grayscale(0);
+            transition: all 0.3s ease;
+        }
+
+        .certification-card:hover .certification-logo {
+            filter: grayscale(0);
+            transform: scale(1.05);
+        }
+
+        .certification-name {
+            color: #355834;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .certification-description {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .certifications-hero {
+                padding: 40px 20px;
+            }
+
+            .certifications-hero h2 {
+                font-size: 2rem;
+            }
+
+            .certifications-description {
+                font-size: 1rem;
+            }
+
+            .certifications-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px;
+            }
+
+            .category-title {
+                font-size: 1.5rem;
+                margin-bottom: 25px;
+            }
+
+            .certification-card {
+                padding: 20px;
+                min-height: 180px;
+            }
+
+            .certification-logo {
+                height: 60px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <section id="certifications">
-        <h2>Certifications & Standards</h2>
-        <div class="logo-section">
-            <img src="assets/logos/pmp.png" alt="PMP">
-            <img src="assets/logos/pspo1.png" alt="PSPO I">
-            <img src="assets/logos/scrum_master.png" alt="Scrum Master">
-            <img src="assets/logos/safe_scrum.png" alt="SAFe Scrum">
-            <img src="assets/logos/itil.png" alt="ITIL">
-            <img src="assets/logos/ccna.png" alt="CCNA">
-            <img src="assets/logos/splunk.png" alt="Splunk">
-            <img src="assets/logos/azure.png" alt="Azure">
-            <img src="assets/logos/agile.png" alt="Agile">
+    <div id="header-placeholder"></div>
+
+    <section class="certifications-section">
+        <div class="certifications-hero">
+            <h2 data-i18n="certifications.main_title">Our Certifications & Standards</h2>
+            <p class="certifications-description" data-i18n="certifications.description">
+                Explore our professional certifications, tools, and compliance frameworks that demonstrate our commitment to excellence.
+            </p>
         </div>
 
-        <h3>Tools & Platforms</h3>
-        <div class="logo-section">
-            <img src="assets/logos/github.png" alt="GitHub">
-            <img src="assets/logos/vscode.png" alt="VS Code">
-            <img src="assets/logos/synology.png" alt="Synology">
-            <img src="assets/logos/paypal.png" alt="PayPal">
+        <div class="certification-category">
+            <h3 class="category-title" data-i18n="certifications.certifications_title">Professional Certifications</h3>
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <img src="https://www.pmi.org/-/media/pmi/other-images/certifications/pmp/pmp-certification.png" alt="PMP" class="certification-logo">
+                    <h4 class="certification-name">PMP® Certification</h4>
+                    <p class="certification-description">Project Management Professional</p>
+                </div>
+                <div class="certification-card">
+                    <img src="https://www.scrum.org/sites/default/files/2021-11/PSPO_1_Logo.png" alt="PSPO I" class="certification-logo">
+                    <h4 class="certification-name">PSPO I</h4>
+                    <p class="certification-description">Professional Scrum Product Owner</p>
+                </div>
+                <div class="certification-card">
+                    <img src="https://www.scrumalliance.org/ScrumRedesignDEVSite/media/ScrumAllianceMedia/Certification%20Badges/SA_Badge_CSM.png" alt="Scrum Master" class="certification-logo">
+                    <h4 class="certification-name">CSM®</h4>
+                    <p class="certification-description">Certified Scrum Master</p>
+                </div>
+                <div class="certification-card">
+                    <img src="https://cdn.scaledagile.com/wp-content/uploads/2023/06/SAFe_Badges_SP.png" alt="SAFe Scrum" class="certification-logo">
+                    <h4 class="certification-name">SAFe® SP</h4>
+                    <p class="certification-description">SAFe Scrum Practitioner</p>
+                </div>
+            </div>
         </div>
 
-        <h3>Compliance & Frameworks</h3>
-        <div class="logo-section">
-            <img src="assets/logos/iso27001.png" alt="ISO 27001">
-            <img src="assets/logos/iso9001.png" alt="ISO 9001">
-            <img src="assets/logos/iso20000.png" alt="ISO 20000">
+        <div class="certification-category">
+            <h3 class="category-title" data-i18n="certifications.tools_title">Tools & Platforms</h3>
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png" alt="GitHub" class="certification-logo">
+                    <h4 class="certification-name">GitHub</h4>
+                    <p class="certification-description">Version Control & Collaboration</p>
+                </div>
+                <div class="certification-card">
+                    <img src="https://code.visualstudio.com/assets/images/code-stable.png" alt="VS Code" class="certification-logo">
+                    <h4 class="certification-name">Visual Studio Code</h4>
+                    <p class="certification-description">Development Environment</p>
+                </div>
+                <div class="certification-card">
+                    <img src="https://www.synology.com/img/company/logo_gray.svg" alt="Synology" class="certification-logo">
+                    <h4 class="certification-name">Synology</h4>
+                    <p class="certification-description">Infrastructure & Storage</p>
+                </div>
+                <div class="certification-card">
+                    <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_111x69.jpg" alt="PayPal" class="certification-logo">
+                    <h4 class="certification-name">PayPal</h4>
+                    <p class="certification-description">Payment Integration</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="certification-category">
+            <h3 class="category-title" data-i18n="certifications.compliance_title">Compliance & Frameworks</h3>
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <img src="https://www.iso.org/files/live/sites/isoorg/files/news/News_archive/2015/en/Ref2014/ISO_27001.gif" alt="ISO 27001" class="certification-logo">
+                    <h4 class="certification-name">ISO 27001</h4>
+                    <p class="certification-description">Information Security Management</p>
+                </div>
+                <div class="certification-card">
+                    <img src="https://www.iso.org/files/live/sites/isoorg/files/news/News_archive/2015/en/Ref2014/ISO_9001.gif" alt="ISO 9001" class="certification-logo">
+                    <h4 class="certification-name">ISO 9001</h4>
+                    <p class="certification-description">Quality Management Systems</p>
+                </div>
+                <div class="certification-card">
+                    <img src="https://www.iso.org/files/live/sites/isoorg/files/news/News_archive/2015/en/Ref2014/ISO_20000.gif" alt="ISO 20000" class="certification-logo">
+                    <h4 class="certification-name">ISO 20000</h4>
+                    <p class="certification-description">IT Service Management</p>
+                </div>
+                <div class="certification-card">
+                    <img src="https://www.agilealliance.org/wp-content/uploads/2016/04/AgileAlliance_Mark_RGB_FB.png" alt="Agile" class="certification-logo">
+                    <h4 class="certification-name">Agile</h4>
+                    <p class="certification-description">Agile Development Framework</p>
+                </div>
+            </div>
         </div>
     </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            await ComponentLoader.init();
+        });
+    </script>
 </body>
 </html>

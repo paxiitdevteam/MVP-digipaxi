@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f2;
+    color: #14281d;
+}
+
+#certifications {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#certifications h2 {
+    color: #355834;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+#certifications h3 {
+    color: #6e633d;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.logo-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0 40px;
+}
+
+.logo-section img {
+    height: 60px;
+    width: auto;
+    transition: transform 0.3s ease;
+    object-fit: contain;
+}
+
+.logo-section img:hover {
+    transform: scale(1.1);
+}
+
+/* Error handling for missing images */
+.logo-section img:not([src]),
+.logo-section img[src=""],
+.logo-section img[src*="error"] {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #certifications {
+        padding: 30px 15px;
+    }
+
+    #certifications h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    #certifications h3 {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    .logo-section {
+        gap: 20px;
+    }
+
+    .logo-section img {
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    #certifications h2 {
+        font-size: 22px;
+    }
+
+    #certifications h3 {
+        font-size: 18px;
+    }
+
+    .logo-section {
+        gap: 15px;
+    }
+
+    .logo-section img {
+        height: 40px;
+    }
+}

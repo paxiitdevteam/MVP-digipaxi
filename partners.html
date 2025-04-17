@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="partners.title">Our Partners & Clients - DigiPaxi</title>
+    <link rel="stylesheet" href="css/digipaxi.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .partners-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .partners-hero {
+            text-align: center;
+            margin-bottom: 60px;
+            background: linear-gradient(rgba(53, 88, 52, 0.05), rgba(53, 88, 52, 0.1));
+            padding: 60px 20px;
+            border-radius: 15px;
+        }
+
+        .partners-hero h2 {
+            color: #355834;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .partners-hero p {
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .partner-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 200px;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .partner-logo {
+            height: 80px;
+            width: auto;
+            margin-bottom: 20px;
+            object-fit: contain;
+            filter: grayscale(0);
+            transition: all 0.3s ease;
+        }
+
+        .partner-card:hover .partner-logo {
+            filter: grayscale(0);
+            transform: scale(1.05);
+        }
+
+        .partner-name {
+            color: #355834;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .partner-website {
+            color: #2196F3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: rgba(33, 150, 243, 0.1);
+        }
+
+        .partner-website:hover {
+            color: #1976D2;
+            background: rgba(33, 150, 243, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .partners-hero {
+                padding: 40px 20px;
+            }
+
+            .partners-hero h2 {
+                font-size: 2rem;
+            }
+
+            .partners-hero p {
+                font-size: 1rem;
+            }
+
+            .partners-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px;
+            }
+
+            .partner-card {
+                padding: 20px;
+                min-height: 180px;
+            }
+
+            .partner-logo {
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <section class="partners-section">
+        <div class="partners-hero">
+            <h2 data-i18n="partners.main_title">Trusted By Industry Leaders</h2>
+            <p data-i18n="partners.description">We are proud to collaborate with leading organizations across various industries, delivering innovative digital solutions and maintaining long-lasting partnerships.</p>
+        </div>
+
+        <div class="partners-grid">
+            <div class="partner-card">
+                <img src="https://www.paris2024.org/wp-content/uploads/2021/01/logo-paris2024.svg" alt="Paris 2024 Olympic Games" class="partner-logo">
+                <h3 class="partner-name">Paris 2024 Olympic Games</h3>
+                <a href="https://www.paris2024.org" class="partner-website" target="_blank">paris2024.org</a>
+            </div>
+            <div class="partner-card">
+                <img src="https://www.avanade.com/-/media/avanade/images/logos/avanade_logo_orange_rgb.png" alt="Avanade France" class="partner-logo">
+                <h3 class="partner-name">Avanade France</h3>
+                <a href="https://www.avanade.com" class="partner-website" target="_blank">avanade.com</a>
+            </div>
+            <div class="partner-card">
+                <img src="https://www.abbott.com/etc.clientlibs/abbott/clientlibs/clientlib-site/resources/img/logo.svg" alt="Abbott" class="partner-logo">
+                <h3 class="partner-name">Abbott</h3>
+                <a href="https://www.abbott.com" class="partner-website" target="_blank">abbott.com</a>
+            </div>
+            <div class="partner-card">
+                <img src="https://www.sanofi.fr/medias/logo-sanofi.svg" alt="Sanofi France" class="partner-logo">
+                <h3 class="partner-name">Sanofi France</h3>
+                <a href="https://www.sanofi.fr" class="partner-website" target="_blank">sanofi.fr</a>
+            </div>
+            <div class="partner-card">
+                <img src="https://atos.net/wp-content/themes/atos/images/logo.svg" alt="Atos" class="partner-logo">
+                <h3 class="partner-name">Atos</h3>
+                <a href="https://atos.net" class="partner-website" target="_blank">atos.net</a>
+            </div>
+            <div class="partner-card">
+                <img src="https://www.credit-agricole.fr/etc.clientlibs/creditagricole/clientlibs/clientlib-site/resources/images/logo-ca.svg" alt="Crédit Agricole Paris" class="partner-logo">
+                <h3 class="partner-name">Crédit Agricole Paris</h3>
+                <a href="https://www.credit-agricole.fr" class="partner-website" target="_blank">credit-agricole.fr</a>
+            </div>
+            <div class="partner-card">
+                <img src="https://www.caisse-epargne.fr/etc.clientlibs/cep/clientlibs/clientlib-site/resources/images/logo-ce.svg" alt="Caisse d'Épargne" class="partner-logo">
+                <h3 class="partner-name">Caisse d'Épargne</h3>
+                <a href="https://www.caisse-epargne.fr" class="partner-website" target="_blank">caisse-epargne.fr</a>
+            </div>
+            <div class="partner-card">
+                <img src="https://france.scc.com/wp-content/uploads/2023/10/logo-scc-blanc.svg" alt="SCC France" class="partner-logo">
+                <h3 class="partner-name">SCC France</h3>
+                <a href="https://france.scc.com" class="partner-website" target="_blank">scc.com</a>
+            </div>
+            <div class="partner-card">
+                <img src="https://www.lsh.fr/wp-content/uploads/2021/01/logo-lsh-blanc.svg" alt="LSH Associés" class="partner-logo">
+                <h3 class="partner-name">LSH Associés</h3>
+                <a href="https://www.lsh.fr" class="partner-website" target="_blank">lsh.fr</a>
+            </div>
+            <div class="partner-card">
+                <img src="https://scculenterprise.ie/wp-content/uploads/2021/07/sccul-enterprise-logo.png" alt="SCCUL Enterprises" class="partner-logo">
+                <h3 class="partner-name">SCCUL Enterprises</h3>
+                <a href="https://scculenterprise.ie" class="partner-website" target="_blank">scculenterprise.ie</a>
+            </div>
+            <div class="partner-card">
+                <img src="https://www.sensient.com/wp-content/themes/sensient-2018/images/logo.png" alt="Sensient Technologies" class="partner-logo">
+                <h3 class="partner-name">Sensient Technologies</h3>
+                <a href="https://www.sensient.com" class="partner-website" target="_blank">sensient.com</a>
+            </div>
+            <div class="partner-card">
+                <img src="https://www.asf.asso.fr/wp-content/uploads/2021/01/Logo-ASF-couleur.png" alt="Ateliers Sans Frontières" class="partner-logo">
+                <h3 class="partner-name">Ateliers Sans Frontières</h3>
+                <a href="https://www.asf.asso.fr" class="partner-website" target="_blank">asf.asso.fr</a>
+            </div>
+            <div class="partner-card">
+                <img src="https://www.selectour.com/themes/custom/selectour/logo.svg" alt="Selectour" class="partner-logo">
+                <h3 class="partner-name">Selectour</h3>
+                <a href="https://www.selectour.com" class="partner-website" target="_blank">selectour.com</a>
+            </div>
+            <div class="partner-card">
+                <img src="https://www.paxiit.com/logo2.png" alt="Paxi iTechnologies" class="partner-logo">
+                <h3 class="partner-name">Paxi iTechnologies</h3>
+                <a href="https://www.paxiit.com" class="partner-website" target="_blank">paxiit.com</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            await ComponentLoader.init();
+        });
+    </script>
+</body>
+</html> 

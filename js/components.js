@@ -6,6 +6,9 @@ class ComponentLoader {
             'nav.about': 'About',
             'nav.services': 'Services',
             'nav.blog': 'Blog',
+            'nav.certifications': 'Certifications',
+            'nav.partners': 'Partners',
+            'nav.products': 'Products',
             'nav.contact': 'Contact',
             'language.en': 'EN',
             'language.fr': 'FR',
@@ -144,7 +147,43 @@ class ComponentLoader {
             'blog.featured.coolors': 'The super fast color palette generator',
             'blog.featured.learn': 'Learn More',
             'blog.pagination.prev': 'Previous',
-            'blog.pagination.next': 'Next'
+            'blog.pagination.next': 'Next',
+
+            // Certifications Page
+            'certifications.title': 'Certifications & Standards - DigiPaxi',
+            'certifications.main_title': 'Our Certifications & Standards',
+            'certifications.certifications_title': 'Professional Certifications',
+            'certifications.tools_title': 'Tools & Platforms',
+            'certifications.compliance_title': 'Compliance & Frameworks',
+            'certifications.description': 'Explore our professional certifications, tools, and compliance frameworks that demonstrate our commitment to excellence.',
+
+            // Affiliate Products Page
+            'affiliate.title': 'Affiliate Products - DigiPaxi',
+            'affiliate.main_title': 'Featured Affiliate Products',
+            'affiliate.description': 'Discover our curated selection of premium digital products and tools to enhance your workflow and boost productivity.',
+            'affiliate.product1.title': 'Coolors - Color Palette Generator',
+            'affiliate.product1.description': 'The super fast color palette generator for designers and developers. Create beautiful color schemes in seconds.',
+            'affiliate.product1.button': 'Get Started',
+            'affiliate.product2.title': 'Envato Elements',
+            'affiliate.product2.description': 'Unlimited downloads of premium digital assets including templates, graphics, and more for your creative projects.',
+            'affiliate.product2.button': 'Explore',
+            'affiliate.product3.title': 'Canva Pro',
+            'affiliate.product3.description': 'Professional design tool for creating stunning visuals, presentations, and marketing materials with ease.',
+            'affiliate.product3.button': 'Design Now',
+            'affiliate.product4.title': 'Gumroad',
+            'affiliate.product4.description': 'Sell your digital products directly to your audience with this easy-to-use e-commerce platform for creators.',
+            'affiliate.product4.button': 'Start Selling',
+            'affiliate.product5.title': 'Namecheap',
+            'affiliate.product5.description': 'Affordable domain registration and web hosting services with excellent customer support and security features.',
+            'affiliate.product5.button': 'Get Domain',
+            'affiliate.product6.title': 'Notion',
+            'affiliate.product6.description': 'All-in-one workspace for notes, tasks, wikis, and databases. Organize your work and life in one place.',
+            'affiliate.product6.button': 'Try Notion',
+
+            // Partners Page
+            'partners.title': 'Our Partners & Clients - DigiPaxi',
+            'partners.main_title': 'Trusted By Industry Leaders',
+            'partners.description': 'We are proud to collaborate with leading organizations across various industries, delivering innovative digital solutions and maintaining long-lasting partnerships.',
         },
         fr: {
             // Navigation
@@ -152,6 +191,9 @@ class ComponentLoader {
             'nav.about': 'À propos',
             'nav.services': 'Services',
             'nav.blog': 'Blog',
+            'nav.certifications': 'Certifications',
+            'nav.partners': 'Partenaires',
+            'nav.products': 'Produits',
             'nav.contact': 'Contact',
             'language.en': 'AN',
             'language.fr': 'FR',
@@ -290,7 +332,43 @@ class ComponentLoader {
             'blog.featured.coolors': 'Le générateur de palettes de couleurs ultra rapide',
             'blog.featured.learn': 'En Savoir Plus',
             'blog.pagination.prev': 'Précédent',
-            'blog.pagination.next': 'Suivant'
+            'blog.pagination.next': 'Suivant',
+
+            // Certifications Page
+            'certifications.title': 'Certifications & Standards - DigiPaxi',
+            'certifications.main_title': 'Nos Certifications & Standards',
+            'certifications.certifications_title': 'Certifications Professionnelles',
+            'certifications.tools_title': 'Outils & Plateformes',
+            'certifications.compliance_title': 'Conformité & Cadres',
+            'certifications.description': 'Découvrez nos certifications professionnelles, outils et cadres de conformité qui démontrent notre engagement envers l\'excellence.',
+
+            // Affiliate Products Page
+            'affiliate.title': 'Produits d\'Affiliation - DigiPaxi',
+            'affiliate.main_title': 'Produits d\'Affiliation Vedettes',
+            'affiliate.description': 'Découvrez notre sélection de produits numériques premium et d\'outils pour améliorer votre flux de travail et augmenter votre productivité.',
+            'affiliate.product1.title': 'Coolors - Générateur de Palettes de Couleurs',
+            'affiliate.product1.description': 'Le générateur de palettes de couleurs ultra rapide pour les designers et développeurs. Créez de beaux schémas de couleurs en quelques secondes.',
+            'affiliate.product1.button': 'Commencer',
+            'affiliate.product2.title': 'Envato Elements',
+            'affiliate.product2.description': 'Téléchargements illimités de ressources numériques premium, y compris des modèles, des graphiques et plus encore pour vos projets créatifs.',
+            'affiliate.product2.button': 'Explorer',
+            'affiliate.product3.title': 'Canva Pro',
+            'affiliate.product3.description': 'Outil de design professionnel pour créer des visuels, présentations et supports marketing impressionnants avec facilité.',
+            'affiliate.product3.button': 'Designer Maintenant',
+            'affiliate.product4.title': 'Gumroad',
+            'affiliate.product4.description': 'Vendez vos produits numériques directement à votre audience avec cette plateforme e-commerce facile à utiliser pour les créateurs.',
+            'affiliate.product4.button': 'Commencer à Vendre',
+            'affiliate.product5.title': 'Namecheap',
+            'affiliate.product5.description': 'Services d\'enregistrement de domaine et d\'hébergement web abordables avec un excellent support client et des fonctionnalités de sécurité.',
+            'affiliate.product5.button': 'Obtenir un Domaine',
+            'affiliate.product6.title': 'Notion',
+            'affiliate.product6.description': 'Espace de travail tout-en-un pour les notes, tâches, wikis et bases de données. Organisez votre travail et votre vie en un seul endroit.',
+            'affiliate.product6.button': 'Essayer Notion',
+
+            // Partners Page
+            'partners.title': 'Nos Partenaires & Clients - DigiPaxi',
+            'partners.main_title': 'Fait Confiance par les Leaders de l\'Industrie',
+            'partners.description': 'Nous sommes fiers de collaborer avec des organisations leaders dans divers secteurs, offrant des solutions numériques innovantes et maintenant des partenariats durables.',
         }
     };
 

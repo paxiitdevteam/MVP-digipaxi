@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DigiPaxi Services - Web Development, Digital Marketing, Affiliate Marketing, and IT Consulting">
+    <meta name="description" content="DigiPaxi Services - Web Development, Digital Marketing, AI Integration, and IT Consulting">
     <title data-i18n="services.title">Our Services - DigiPaxi</title>
     <link rel="stylesheet" href="css/digipaxi.css">
+    <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/language-switcher.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -107,8 +108,9 @@
             <div class="service-card">
                 <img src="images/web-dev-icon.svg" alt="Web Development" class="service-icon">
                 <div class="service-content">
-                    <h2 data-i18n="services.webdev.title">1. Web Development</h2>
+                    <h2 data-i18n="services.webdev.title">Web Development</h2>
                     <p data-i18n="services.webdev.description">We create responsive, user-friendly websites tailored to your business needs, ensuring a seamless online presence.</p>
+                    <a href="services/web_development.html" class="service-link" data-i18n="services.webdev.learnMore">Learn More <i class="fas fa-arrow-right"></i></a>
                     <blockquote class="testimonial">
                         <p data-i18n="services.webdev.testimonial">"DigiPaxi transformed our online presence with a website that perfectly represents our brand and converts visitors into customers."</p>
                         <cite data-i18n="services.webdev.testimonialAuthor">- Sarah Johnson, Small Business Owner</cite>
@@ -119,8 +121,9 @@
             <div class="service-card">
                 <img src="images/digital-marketing-icon.svg" alt="Digital Marketing" class="service-icon">
                 <div class="service-content">
-                    <h2 data-i18n="services.marketing.title">2. Digital Marketing</h2>
+                    <h2 data-i18n="services.marketing.title">Digital Marketing</h2>
                     <p data-i18n="services.marketing.description">Our digital marketing strategies help you reach your target audience effectively through SEO, social media, and email campaigns.</p>
+                    <a href="services/digital_marketing.html" class="service-link" data-i18n="services.marketing.learnMore">Learn More <i class="fas fa-arrow-right"></i></a>
                     <blockquote class="testimonial">
                         <p data-i18n="services.marketing.testimonial">"Since implementing DigiPaxi's digital marketing strategy, our online traffic has increased by 200% and our conversion rate has improved significantly."</p>
                         <cite data-i18n="services.marketing.testimonialAuthor">- Michael Chen, Marketing Director</cite>
@@ -129,10 +132,24 @@
             </div>
 
             <div class="service-card">
+                <img src="images/ai-integration-icon.svg" alt="AI Integration" class="service-icon">
+                <div class="service-content">
+                    <h2 data-i18n="services.ai.title">AI Integration</h2>
+                    <p data-i18n="services.ai.description">Leverage the power of artificial intelligence to streamline operations, enhance decision-making, and gain a competitive edge.</p>
+                    <a href="services/ai_integration.html" class="service-link" data-i18n="services.ai.learnMore">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <blockquote class="testimonial">
+                        <p data-i18n="services.ai.testimonial">"DigiPaxi's AI integration transformed our workflow efficiency by 200%. Their expertise in implementing AI solutions was invaluable."</p>
+                        <cite data-i18n="services.ai.testimonialAuthor">- Michael Chen, CTO, Tech Solutions Corp</cite>
+                    </blockquote>
+                </div>
+            </div>
+
+            <div class="service-card">
                 <img src="images/consulting-icon.svg" alt="IT Consulting" class="service-icon">
                 <div class="service-content">
-                    <h2 data-i18n="services.consulting.title">3. IT Consulting</h2>
+                    <h2 data-i18n="services.consulting.title">IT Consulting</h2>
                     <p data-i18n="services.consulting.description">Our IT consulting services guide you in adopting the right technologies to optimize your business operations.</p>
+                    <a href="services/it_consulting.html" class="service-link" data-i18n="services.consulting.learnMore">Learn More <i class="fas fa-arrow-right"></i></a>
                     <blockquote class="testimonial">
                         <p data-i18n="services.consulting.testimonial">"DigiPaxi's IT consulting helped us streamline our operations and implement the right tools for our growing business."</p>
                         <cite data-i18n="services.consulting.testimonialAuthor">- David Rodriguez, Operations Manager</cite>
@@ -143,7 +160,7 @@
             <div class="service-card">
                 <img src="images/affiliate-icon.svg" alt="Digital Products" class="service-icon">
                 <div class="service-content">
-                    <h2 data-i18n="services.affiliate.title">4. Recommended Digital Products</h2>
+                    <h2 data-i18n="services.affiliate.title">Recommended Digital Products</h2>
                     <p data-i18n="services.affiliate.description">We've carefully selected these high-quality digital products to enhance your creative and business workflows.</p>
                     <div class="product-grid">
                         <div class="product-item">
@@ -179,5 +196,11 @@
     <div id="footer-placeholder"></div>
 
     <script src="js/components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeHeader();
+            initializeFooter();
+        });
+    </script>
 </body>
 </html>
