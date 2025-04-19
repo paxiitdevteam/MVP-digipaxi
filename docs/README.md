@@ -149,6 +149,37 @@ For technical support or questions:
 - Documentation: [Internal Wiki]
 - Issue Tracking: [Project Management Tool]
 
+## DigiPaxi Development Setup
+
+### Environment Configuration
+
+1. Copy the environment template:
+   ```bash
+   cp .env.example .env
+   ```
+
+2. Update the `.env` file with your actual configuration values:
+   - API keys
+   - Database credentials
+   - Service configurations
+   - Security secrets
+
+3. Never commit the `.env` file to version control
+   - The `.env` file is already in `.gitignore`
+   - Only commit `.env.example` as a template
+
+4. For production:
+   - Use different environment variables
+   - Keep production credentials secure
+   - Use environment-specific files (e.g., `.env.production`)
+
+### Security Notes
+
+- Keep your `.env` file secure and never share it
+- Rotate secrets regularly
+- Use different credentials for development and production
+- Consider using a secrets management service for production
+
 ---
 
 © 2024 DigiPaxi. All rights reserved. 
