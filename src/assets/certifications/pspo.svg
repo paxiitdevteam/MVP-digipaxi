@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect x="0" y="0" width="200" height="200" fill="#ffffff"/>
+    
+    <!-- Scrum Circle -->
+    <circle cx="100" cy="100" r="70" 
+            fill="#14281d" 
+            stroke="#87986a" 
+            stroke-width="4"/>
+    
+    <!-- Product Owner Symbol -->
+    <path d="M70 80
+             L100 60
+             L130 80
+             L130 120
+             L100 140
+             L70 120 Z" 
+          fill="none"
+          stroke="#87986a" 
+          stroke-width="4"/>
+    
+    <!-- Inner Connection Lines -->
+    <path d="M100 60 L100 140
+             M70 80 L130 120
+             M130 80 L70 120" 
+          stroke="#87986a" 
+          stroke-width="2"
+          opacity="0.6"/>
+    
+    <!-- PSPO Text -->
+    <text x="100" y="160" 
+          font-family="Arial, sans-serif" 
+          font-size="16" 
+          fill="#ffffff" 
+          text-anchor="middle" 
+          font-weight="bold">
+        PSPO I
+    </text>
+</svg> 

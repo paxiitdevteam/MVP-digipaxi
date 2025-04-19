@@ -1,12 +1,36 @@
 # Dependencies
 node_modules/
-package-lock.json
-yarn.lock
+vendor/
 
 # Environment files
 .env
 .env.local
 .env.*.local
+
+# IDE files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output
+dist/
+build/
+out/
+
+# Cache
+.cache/
+.temp/
 
 # IDE/Editor folders
 .idea/
@@ -15,24 +39,11 @@ yarn.lock
 *.swo
 
 # OS generated files
-.DS_Store
 .DS_Store?
 ._*
 .Spotlight-V100
 .Trashes
 ehthumbs.db
-Thumbs.db
-
-# Build/Deploy directories
-dist/
-build/
-out/
-
-# Logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
 # Editor directories and files
 .idea
@@ -45,8 +56,6 @@ yarn-error.log*
 
 # Temporary files
 *.tmp
-*.temp
-.cache
 
 # Local development
 *.local

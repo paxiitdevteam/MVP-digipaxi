@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect x="0" y="0" width="200" height="200" fill="#ffffff"/>
+    
+    <!-- Quality Circle -->
+    <circle cx="100" cy="100" r="70" 
+            fill="#14281d" 
+            stroke="#87986a" 
+            stroke-width="4"/>
+    
+    <!-- Checkmark -->
+    <path d="M70 100
+             L90 120
+             L130 80" 
+          fill="none"
+          stroke="#87986a" 
+          stroke-width="8"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+    
+    <!-- ISO Text -->
+    <text x="100" y="160" 
+          font-family="Arial, sans-serif" 
+          font-size="16" 
+          fill="#ffffff" 
+          text-anchor="middle" 
+          font-weight="bold">
+        ISO 9001
+    </text>
+</svg> 

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="60" cy="60" r="58" fill="#14281d" stroke="#c2a878" stroke-width="2"/>
+  
+  <!-- Connection nodes -->
+  <circle cx="40" cy="40" r="8" fill="#6e633d"/>
+  <circle cx="80" cy="40" r="8" fill="#6e633d"/>
+  <circle cx="60" cy="80" r="8" fill="#6e633d"/>
+  
+  <!-- Connection lines -->
+  <line x1="40" y1="40" x2="80" y2="40" stroke="#f1f5f2" stroke-width="2"/>
+  <line x1="40" y1="40" x2="60" y2="80" stroke="#f1f5f2" stroke-width="2"/>
+  <line x1="80" y1="40" x2="60" y2="80" stroke="#f1f5f2" stroke-width="2"/>
+  
+  <!-- Center dots -->
+  <circle cx="60" cy="40" r="3" fill="#c2a878"/>
+  <circle cx="50" cy="60" r="3" fill="#c2a878"/>
+  <circle cx="70" cy="60" r="3" fill="#c2a878"/>
+</svg> 

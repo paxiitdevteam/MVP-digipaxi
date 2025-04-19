@@ -1,0 +1,15 @@
+[core]
+    editor = notepad
+    autocrlf = true
+    whitespace = trailing-space,space-before-tab
+[init]
+    defaultBranch = main
+[color]
+    ui = auto
+[alias]
+    st = status
+    co = checkout
+    br = branch
+    ci = commit
+[credential]
+    helper = wincred 

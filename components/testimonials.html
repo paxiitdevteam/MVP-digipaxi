@@ -1,0 +1,224 @@
+<!-- Testimonials Section -->
+<section class="testimonials-section">
+    <div class="testimonials-container">
+        <h2 class="section-title" data-i18n="testimonials.title">What Our Clients Say</h2>
+        <p class="section-subtitle" data-i18n="testimonials.subtitle">Discover how we've helped businesses achieve their digital goals</p>
+        
+        <div class="testimonials-slider">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p class="testimonial-text" data-i18n="testimonials.1.text">"DigiPaxi transformed our online presence with their expert web development services. Their team's attention to detail and commitment to excellence exceeded our expectations."</p>
+                    <div class="testimonial-author">
+                        <img src="images/testimonials/client1.jpg" alt="Sarah Johnson" class="author-image">
+                        <div class="author-info">
+                            <h4 class="author-name" data-i18n="testimonials.1.name">Sarah Johnson</h4>
+                            <p class="author-title" data-i18n="testimonials.1.title">CEO, TechStart Inc.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p class="testimonial-text" data-i18n="testimonials.2.text">"The digital marketing strategy implemented by DigiPaxi helped us increase our online visibility by 200%. Their data-driven approach and innovative solutions are truly impressive."</p>
+                    <div class="testimonial-author">
+                        <img src="images/testimonials/client2.jpg" alt="Michael Chen" class="author-image">
+                        <div class="author-info">
+                            <h4 class="author-name" data-i18n="testimonials.2.name">Michael Chen</h4>
+                            <p class="author-title" data-i18n="testimonials.2.title">Marketing Director, GrowthCo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p class="testimonial-text" data-i18n="testimonials.3.text">"Working with DigiPaxi on our IT consulting needs was a game-changer. Their expertise in AI integration and system optimization helped us streamline our operations significantly."</p>
+                    <div class="testimonial-author">
+                        <img src="images/testimonials/client3.jpg" alt="Emma Rodriguez" class="author-image">
+                        <div class="author-info">
+                            <h4 class="author-name" data-i18n="testimonials.3.name">Emma Rodriguez</h4>
+                            <p class="author-title" data-i18n="testimonials.3.title">CTO, InnovateTech</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slider-controls">
+            <button class="slider-btn prev-btn" aria-label="Previous testimonial">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 18l-6-6 6-6"/>
+                </svg>
+            </button>
+            <div class="slider-dots">
+                <button class="slider-dot active" aria-label="Go to testimonial 1"></button>
+                <button class="slider-dot" aria-label="Go to testimonial 2"></button>
+                <button class="slider-dot" aria-label="Go to testimonial 3"></button>
+            </div>
+            <button class="slider-btn next-btn" aria-label="Next testimonial">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<style>
+.testimonials-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(rgba(20, 40, 29, 0.05), rgba(20, 40, 29, 0.1));
+}
+
+.testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.testimonials-section h2 {
+    color: #14281d;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.testimonials-section p {
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.testimonials-slider {
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 0;
+}
+
+.testimonials-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.testimonial-card {
+    min-width: 100%;
+    padding: 0 1rem;
+}
+
+.testimonial-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-rating {
+    color: #ffd700;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-content blockquote {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+    margin: 1rem 0;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.author-image {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-info h4 {
+    margin: 0;
+    color: #14281d;
+    font-size: 1rem;
+}
+
+.author-info p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.slider-nav:hover {
+    background: #f0f0f0;
+}
+
+.slider-nav.prev {
+    left: 1rem;
+}
+
+.slider-nav.next {
+    right: 1rem;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background: #2196F3;
+}
+
+@media (max-width: 768px) {
+    .testimonials-section {
+        padding: 2rem 1rem;
+    }
+
+    .testimonials-section h2 {
+        font-size: 2rem;
+    }
+
+    .testimonial-content {
+        padding: 1.5rem;
+    }
+
+    .slider-nav {
+        display: none;
+    }
+}
+</style>
+
+<!-- Add testimonials CSS and JS -->
+<link rel="stylesheet" href="css/testimonials.css">
+<script src="js/testimonials.js" defer></script> 

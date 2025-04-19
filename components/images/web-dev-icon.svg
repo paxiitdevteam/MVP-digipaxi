@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="60" cy="60" r="58" fill="#14281d" stroke="#c2a878" stroke-width="2"/>
+  
+  <!-- Code brackets -->
+  <path d="M40,40 L25,60 L40,80" fill="none" stroke="#f1f5f2" stroke-width="3" stroke-linecap="round"/>
+  <path d="M80,40 L95,60 L80,80" fill="none" stroke="#f1f5f2" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Center line representing code -->
+  <line x1="65" y1="35" x2="55" y2="85" stroke="#6e633d" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Decorative dots -->
+  <circle cx="30" cy="50" r="2" fill="#c2a878"/>
+  <circle cx="90" cy="50" r="2" fill="#c2a878"/>
+  <circle cx="30" cy="70" r="2" fill="#c2a878"/>
+  <circle cx="90" cy="70" r="2" fill="#c2a878"/>
+</svg> 

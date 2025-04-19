@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DigiPaxi - Your partner in digital transformation and affiliate marketing">
+    <title data-i18n="home.title">DigiPaxi - Digital Solutions & Affiliate Marketing</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/digipaxi.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/language-switcher.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 data-i18n="home.hero.title">Transform Your Digital Presence</h1>
+                <p data-i18n="home.hero.subtitle">Innovative solutions for modern businesses</p>
+                <div class="hero-buttons">
+                    <a href="services.html" class="cta-button primary" data-i18n="home.hero.cta">Discover Our Services</a>
+                    <a href="contact.html" class="cta-button secondary" data-i18n="home.hero.contact">Contact Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Web Development</h3>
+                        <p>Custom websites and applications</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Digital Marketing</h3>
+                        <p>Strategic online marketing</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-robot"></i>
+                        <h3>AI Solutions</h3>
+                        <p>Intelligent automation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies -->
+        <section class="case-studies">
+            <div class="container">
+                <h2>Success Stories</h2>
+                <div class="case-studies-grid">
+                    <div class="case-study">
+                        <h3>E-commerce Growth</h3>
+                        <p>200% sales increase</p>
+                    </div>
+                    <div class="case-study">
+                        <h3>Digital Marketing</h3>
+                        <p>150% ROI improvement</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Page content -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="js/components.js"></script>
+    <script src="js/language-switcher.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            // Only load header
+            const headerPlaceholder = document.getElementById('header-placeholder');
+            if (headerPlaceholder) {
+                const response = await fetch('components/header.html');
+                if (response.ok) {
+                    const html = await response.text();
+                    headerPlaceholder.innerHTML = html;
+                }
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            ComponentLoader.init().then(() => {
+                ComponentLoader.loadComponents();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DigiPaxi's trusted partnerships and collaborations">
+    <title>Our Partners - DigiPaxi</title>
+    <link rel="stylesheet" href="../css/digipaxi.css">
+    <link rel="stylesheet" href="partners.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header Component -->
+    <div id="header-placeholder"></div>
+
+    <!-- Return Button -->
+    <a href="../index.html" class="return-button">
+        <i class="fas fa-chevron-circle-left"></i>
+        <span>Return to Home</span>
+    </a>
+
+    <main id="partners">
+        <section class="partners-hero">
+            <div class="hero-content">
+                <h1>Our Trusted Partners</h1>
+                <p>Collaborating with industry leaders to deliver excellence</p>
+            </div>
+        </section>
+
+        <div class="partners-container">
+            <!-- Category Navigation -->
+            <nav class="category-nav" aria-label="Partner Categories">
+                <button class="category-button active" data-category="all">
+                    <i class="fas fa-th-large"></i> All Partners
+                </button>
+                <button class="category-button" data-category="technology">
+                    <i class="fas fa-microchip"></i> Technology
+                </button>
+                <button class="category-button" data-category="service">
+                    <i class="fas fa-cogs"></i> Services
+                </button>
+                <button class="category-button" data-category="strategic">
+                    <i class="fas fa-handshake"></i> Strategic
+                </button>
+                <button class="category-button" data-category="affiliate">
+                    <i class="fas fa-link"></i> Affiliate
+                </button>
+                <button class="category-button" data-category="marketing">
+                    <i class="fas fa-bullhorn"></i> Marketing
+                </button>
+            </nav>
+
+            <section class="partner-section" data-category="technology">
+                <h2>Technology Partners</h2>
+                <p class="section-description">Leading technology providers powering our solutions</p>
+                <div class="partner-grid">
+                    <!-- Technology Partners will be added here -->
+                </div>
+            </section>
+
+            <section class="partner-section" data-category="service">
+                <h2>Service Partners</h2>
+                <p class="section-description">Essential services enhancing our offerings</p>
+                <div class="partner-grid">
+                    <!-- Service Partners will be added here -->
+                </div>
+            </section>
+
+            <section class="partner-section" data-category="strategic">
+                <h2>Strategic Alliances</h2>
+                <p class="section-description">Key partnerships driving innovation</p>
+                <div class="partner-grid">
+                    <!-- Strategic Alliances will be added here -->
+                </div>
+            </section>
+
+            <section class="partner-section" data-category="affiliate">
+                <h2>Affiliate Partners</h2>
+                <p class="section-description">Trusted platforms for affiliate marketing success</p>
+                <div class="partner-grid">
+                    <!-- Affiliate Partners will be added here -->
+                </div>
+            </section>
+
+            <section class="partner-section" data-category="marketing">
+                <h2>Marketing Tools</h2>
+                <p class="section-description">Premium marketing and analytics solutions</p>
+                <div class="partner-grid">
+                    <!-- Marketing Partners will be added here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="../js/components.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="partner-logos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load components
+            loadComponent('header');
+            loadComponent('footer');
+
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100
+            });
+
+            // Category filtering
+            const categoryButtons = document.querySelectorAll('.category-button');
+            const partnerSections = document.querySelectorAll('.partner-section');
+
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Update active button
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    // Filter sections
+                    const category = button.dataset.category;
+                    partnerSections.forEach(section => {
+                        if (category === 'all' || section.dataset.category === category) {
+                            section.style.display = 'block';
+                            section.style.animation = 'fadeInUp 0.6s ease-out';
+                        } else {
+                            section.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

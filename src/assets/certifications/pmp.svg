@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect x="0" y="0" width="200" height="200" fill="#ffffff"/>
+    
+    <!-- PMP Shield -->
+    <path d="M100 20
+             L160 40
+             L160 100
+             C160 140 100 180 100 180
+             C100 180 40 140 40 100
+             L40 40 Z" 
+          fill="#14281d" 
+          stroke="#87986a" 
+          stroke-width="4"/>
+    
+    <!-- Star Icon -->
+    <path d="M100 60
+             L110 90
+             L140 90
+             L115 110
+             L125 140
+             L100 120
+             L75 140
+             L85 110
+             L60 90
+             L90 90 Z"
+          fill="#87986a"/>
+    
+    <!-- PMP Text -->
+    <text x="100" y="160" 
+          font-family="Arial, sans-serif" 
+          font-size="16" 
+          fill="#ffffff" 
+          text-anchor="middle" 
+          font-weight="bold">
+        PMP®
+    </text>
+</svg> 

@@ -10,7 +10,7 @@
             <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
             <li><a href="services.html" class="nav-link" data-i18n="nav.services">Services</a></li>
             <li><a href="blog.html" class="nav-link" data-i18n="nav.blog">Blog</a></li>
-            <li><a href="certifications.html" class="nav-link" data-i18n="nav.certifications">Certifications</a></li>
+            <li><a href="./certifications_showcase/certifications.html" class="nav-link" data-i18n="nav.certifications">Certifications</a></li>
             <li><a href="partners.html" class="nav-link" data-i18n="nav.partners">Partners</a></li>
             <li><a href="affiliate-products.html" class="nav-link" data-i18n="nav.products">Products</a></li>
             <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
@@ -67,87 +67,47 @@ header {
     font-size: 1rem;
     font-weight: 500;
     transition: color 0.3s ease;
-    position: relative;
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #2196F3;
-    transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #2196F3;
-}
-
-.nav-link:hover::after {
-    width: 100%;
-}
-
-.nav-link.active {
-    color: #2196F3;
-}
-
-.nav-link.active::after {
-    width: 100%;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .language-selector {
     display: flex;
     gap: 0.5rem;
-    margin-left: 1rem;
-    align-items: center;
 }
 
 .lang-switch {
-    padding: 0.5rem 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 4px;
-    background: transparent;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: #fff;
+    padding: 0.5rem 1rem;
     cursor: pointer;
-    font-weight: 500;
-    transition: all 0.2s ease;
-    font-size: 0.9rem;
-    text-transform: uppercase;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
 .lang-switch:hover {
     background: rgba(255, 255, 255, 0.1);
-    border-color: #fff;
 }
 
 .lang-switch.active {
-    background: #2196F3;
-    border-color: #2196F3;
-    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 @media (max-width: 768px) {
     header {
         padding: 1rem;
     }
-
+    
     .navbar ul {
         gap: 1rem;
     }
-
+    
     .nav-link {
         font-size: 0.9rem;
-    }
-
-    .language-selector {
-        margin-left: 0.5rem;
-    }
-
-    .lang-switch {
-        padding: 0.3rem 0.6rem;
-        font-size: 0.8rem;
     }
 }
 </style>

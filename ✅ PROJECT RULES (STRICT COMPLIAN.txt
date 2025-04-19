@@ -1,0 +1,22 @@
+## ✅ PROJECT RULES (STRICT COMPLIANCE)
+
+To maintain consistency, avoid mix-ups, and ensure clean implementation throughout the project, the following rules **must be strictly followed**:
+
+- 🚫 No experimentation  
+- 🚫 No trial and error  
+- ✅ Follow the **exact approved plan**  
+- ✏️ Make **precise changes only**  
+- ❌ Do **not create duplicate files**  
+- 🔁 Focus on **one task at a time**  
+- 🧩 Use the **validated template structure** for all pages and save changes  
+- 💾 **Back up the current stable version** before applying new changes  
+- 📁 **Use consistent naming conventions** for all files and folders  
+- 📝 **Log all changes** (with timestamp and purpose) in a changelog or commit message  
+- 🧪 **Test after each change** before proceeding to the next step  
+- 📐 Never update multiple components in one change — isolate each task  
+- 📂 **Only work within the defined folder structure** — no exceptions  
+- 📦 Use **only verified assets** (CSS, JS, images) from the core library  
+- 🔧 Do **not edit minified or auto-generated files manually** — edit the source  
+- ✅ Always confirm **success criteria** before marking a task as complete
+
+---

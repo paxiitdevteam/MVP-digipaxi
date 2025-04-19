@@ -1,0 +1,164 @@
+<section class="newsletter-section">
+    <div class="newsletter-container">
+        <h2 data-i18n="newsletter.title">Stay Updated</h2>
+        <p data-i18n="newsletter.description">Subscribe to our newsletter for the latest updates, insights, and exclusive offers.</p>
+        <form id="newsletter-form" class="newsletter-form">
+            <div class="form-group">
+                <input type="email" id="newsletter-email" name="email" placeholder="Enter your email" required data-i18n-placeholder="newsletter.emailPlaceholder">
+                <button type="submit" class="newsletter-submit" data-i18n="newsletter.subscribe">Subscribe</button>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" id="newsletter-consent" name="consent" required>
+                <label for="newsletter-consent" data-i18n="newsletter.consent">I agree to receive marketing communications from DigiPaxi</label>
+            </div>
+            <div id="newsletter-message" class="newsletter-message"></div>
+        </form>
+    </div>
+</section>
+
+<style>
+.newsletter-section {
+    background: linear-gradient(rgba(20, 40, 29, 0.05), rgba(20, 40, 29, 0.1));
+    padding: 4rem 2rem;
+    margin: 3rem 0;
+    border-radius: 8px;
+}
+
+.newsletter-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.newsletter-section h2 {
+    color: #14281d;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter-section p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.newsletter-form input[type="email"] {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.newsletter-submit {
+    background: #2196F3;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-submit:hover {
+    background: #1976D2;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.form-check input[type="checkbox"] {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.form-check label {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.newsletter-message {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    border-radius: 4px;
+    display: none;
+}
+
+.newsletter-message.success {
+    display: block;
+    background: #E8F5E9;
+    color: #2E7D32;
+}
+
+.newsletter-message.error {
+    display: block;
+    background: #FFEBEE;
+    color: #C62828;
+}
+
+@media (max-width: 768px) {
+    .newsletter-section {
+        padding: 2rem 1rem;
+    }
+
+    .form-group {
+        flex-direction: column;
+    }
+
+    .newsletter-submit {
+        width: 100%;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('newsletter-form');
+    const messageDiv = document.getElementById('newsletter-message');
+
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const email = document.getElementById('newsletter-email').value;
+        const consent = document.getElementById('newsletter-consent').checked;
+
+        if (!consent) {
+            showMessage('Please accept the marketing communications consent', 'error');
+            return;
+        }
+
+        try {
+            // Here you would typically send the data to your server
+            // For now, we'll just show a success message
+            showMessage('Thank you for subscribing!', 'success');
+            form.reset();
+        } catch (error) {
+            showMessage('An error occurred. Please try again later.', 'error');
+        }
+    });
+
+    function showMessage(text, type) {
+        messageDiv.textContent = text;
+        messageDiv.className = 'newsletter-message ' + type;
+        setTimeout(() => {
+            messageDiv.className = 'newsletter-message';
+        }, 5000);
+    }
+});
+</script> 
